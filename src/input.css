@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg:      #FFFFFF;
+  --color-text:    #111111;
+  --color-accent:  #A63D1F;
+  --color-border:  rgba(0, 0, 0, 0.1);
+  --color-surface: #F5F5F5;
+
+  --font-mono: 'Fira Code', monospace;
+  --font-sans: 'Inter', sans-serif;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Dot grid — hero section ── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* ── Pulsing gradient — hero ambient overlay ── */
+@keyframes gradientPulse {
+  0%, 100% { opacity: 0.04; transform: scale(1); }
+  50%       { opacity: 0.07; transform: scale(1.04); }
+}
+.bg-pulse {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 65% 35%, #A63D1F, transparent);
+  animation: gradientPulse 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Card image — grayscale → colour on hover ── */
+.card-image {
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.45s var(--ease-standard);
+}
+.card:hover .card-image {
+  filter: grayscale(0%);
+}
+
+/* ── Case-study card ── */
+.card {
+  position: relative;
+  transition: transform 0.35s var(--ease-standard), box-shadow 0.35s var(--ease-standard);
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+/* Terracotta bottom border animates in */
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: #A63D1F;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-standard);
+}
+.card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Article card — pulsing accent gradient + same lift/shadow ── */
+.article-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-standard), box-shadow 0.35s var(--ease-standard);
+}
+/* Ambient terracotta pulse — always running, contained to card */
+.article-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 70% 60% at 70% 0%, rgba(166, 61, 31, 0.06), transparent);
+  animation: gradientPulse 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+/* Keep card content above the pseudo-element */
+.article-card > * {
+  position: relative;
+  z-index: 1;
+}
+.article-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+
+/* ── Documaster card gradient overlay — hidden by default, revealed on hover ── */
+.card-overlay-documaster {
+  background-image: linear-gradient(168.85deg, rgba(71, 88, 105, 0.1) 0%, rgba(166, 61, 31, 0.15) 83.333%);
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-standard);
+}
+.card:hover .card-overlay-documaster {
+  opacity: 1;
+}
+
+/* ── Hero ambient gradients — warm + cool pulsing ── */
+@keyframes heroWarmPulse {
+  0%, 100% { opacity: 0.08; transform: scale(1); }
+  50%       { opacity: 0.16; transform: scale(1.06); }
+}
+@keyframes heroCoolPulse {
+  0%, 100% { opacity: 0.05; transform: scale(1); }
+  50%       { opacity: 0.12; transform: scale(1.06); }
+}
+.hero-grad-warm {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 70% at 18% 35%, #A63D1F, transparent);
+  animation: heroWarmPulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-grad-cool {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 65% at 82% 78%, #2D4A7A, transparent);
+  animation: heroCoolPulse 8s ease-in-out infinite -4s;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Body ambient cool gradient — fixed, very subtle ── */
+.body-grad-cool {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 8% 65%, rgba(45, 74, 122, 0.04), transparent),
+    radial-gradient(ellipse 45% 55% at 92% 18%, rgba(45, 74, 122, 0.03), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── How I Work row — hover accent ── */
+.hiw-row {
+  position: relative;
+  transition: background 0.3s var(--ease-standard);
+}
+.hiw-row::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: #A63D1F;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-standard);
+}
+.hiw-row:hover {
+  background: rgba(166, 61, 31, 0.03);
+}
+.hiw-row:hover::after {
+  transform: scaleX(1);
+}
+.hiw-row:hover p:last-child {
+  opacity: 1;
+}
+
+/* ── Article card — terracotta bottom border on hover (same as .card) ── */
+.article-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: #A63D1F;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-standard);
+  z-index: 2;
+}
+.article-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .body-grad-cool { display: none; }
+  .hero-grad-warm, .hero-grad-cool { animation: none; }
+  .hero-grad-warm { opacity: 0.06; }
+  .hero-grad-cool { opacity: 0.04; }
+  .article-card::before { animation: none; opacity: 0.04; }
+  .card, .article-card {
+    transition: box-shadow 0.35s var(--ease-standard);
+  }
+  .card:hover, .article-card:hover {
+    transform: none;
+  }
+  .hiw-row::before { transition: none; }
+}
