@@ -16,9 +16,13 @@
   <!-- ─── Nav ─── -->
   <nav class="sticky top-0 z-50 bg-[rgba(255,255,255,0.92)] border-b border-border backdrop-blur-sm">
     <div class="max-w-[1440px] mx-auto flex h-[70px] items-center justify-between px-5 sm:px-10 lg:px-16 xl:px-40">
-      <a href="../index.html#work"
-         class="font-mono text-[#666] text-[13px] hover:text-text transition-colors duration-300">← Work</a>
       <span class="font-mono font-medium text-text text-[15px] tracking-[0.6px]">[DL_]</span>
+      <div class="hidden sm:flex items-center gap-6 md:gap-8 font-mono text-text text-[13px]">
+        <a href="../index.html#work"       class="hover:text-accent transition-colors duration-300">Work</a>
+        <a href="../index.html#how-i-work" class="hidden md:inline hover:text-accent transition-colors duration-300">Process</a>
+        <a href="../index.html#about"      class="hover:text-accent transition-colors duration-300">About</a>
+        <a href="../index.html#contact"    class="hover:text-accent transition-colors duration-300">Contact</a>
+      </div>
       <a href="https://drive.google.com/uc?export=download&id=1XcTO_O9p-34pGpT_8CcOZwiL8PDdYiPG"
          target="_blank" rel="noopener noreferrer"
          class="border border-text font-mono text-text text-xs px-4 py-[7px] rounded-full hover:border-accent hover:text-accent transition-colors duration-300">
@@ -33,19 +37,23 @@
                 px-5 sm:px-10 lg:px-16 xl:px-40
                 pt-14 md:pt-20 pb-12 md:pb-20">
 
+      <!-- Back link -->
+      <a href="../index.html#work"
+         class="font-mono text-[#666] text-[13px] hover:text-accent transition-colors duration-300">← Work</a>
+
       <!-- Breadcrumb -->
       <p class="font-mono text-[#555] text-[12px] tracking-[0.6px]">Case Study · Lead Product Designer · Omniva</p>
 
-      <!-- Title -->
+      <!-- Title — lines 1–2 Fira Code, line 3 Inter ExtraBold accent (matches Figma) -->
       <div class="flex flex-col">
-        <p class="font-sans font-normal text-text
+        <p class="font-mono font-normal text-text
                   text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
-                  leading-[1.2] tracking-[-0.72px]">
+                  leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
           Turning infrastructure complexity into clarity —
         </p>
         <p class="font-sans font-extrabold text-accent
                   text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
-                  leading-[1.2] tracking-[-0.72px]">
+                  leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
           for the people behind it.
         </p>
       </div>
@@ -112,9 +120,22 @@
         The product had matured.<br>The experience hadn't caught up.
       </h2>
 
-      <!-- Context screenshot — full width -->
-      <div class="w-full bg-surface rounded-2xl overflow-hidden aspect-[2626/1900] flex items-center justify-center">
-        <p class="font-mono text-[#999] text-[11px]">Platform screenshot — inherited state</p>
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        This diagram illustrates the overall ecosystem behind the Omniva Cloud Console — how customer actions, internal operations, infrastructure, and AI intelligence connect into a single platform.
+      </p>
+
+      <!-- Ecosystem diagram -->
+      <div class="w-full overflow-hidden">
+        <img src="../images/omniva/omniva-ecosystem%20diagrame.jpg"
+             alt="Omniva Cloud Console — ecosystem diagram"
+             class="w-full h-auto scale-[1.02] origin-center" />
+      </div>
+
+      <!-- Context screenshot — max 52.8125rem centered, natural height -->
+      <div class="w-full max-w-[52.8125rem] mx-auto rounded-2xl overflow-hidden">
+        <img src="../images/omniva/context-screenshot.png"
+             alt="Platform — inherited state before redesign"
+             class="w-full h-auto" />
       </div>
 
       <!-- 2-col: body text + before images -->
@@ -152,9 +173,9 @@
           <img src="../images/omniva/before-dashboard.png"
                alt="Before state — inherited dashboard"
                class="w-full rounded-xl object-cover" />
-          <div class="w-full bg-surface rounded-xl aspect-[531/407] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Homepage — subscription focus, no task signal</p>
-          </div>
+          <img src="../images/omniva/before-dashboard-2.png"
+               alt="Homepage — subscription focus, no task signal"
+               class="w-full rounded-xl object-cover" />
         </div>
       </div>
 
@@ -257,18 +278,18 @@
       </div>
 
       <!-- Nav before / after comparison -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 py-8 md:py-12">
+      <div class="flex flex-col gap-8 py-8 md:py-12">
         <div class="flex flex-col gap-4">
           <p class="font-mono text-[#555] text-[11px]">Before — Inherited navigation</p>
-          <div class="w-full bg-surface rounded-xl aspect-[456/924] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Navigation — before state</p>
-          </div>
+          <img src="../images/omniva/nav-before.png"
+               alt="Navigation — before state"
+               class="w-full h-auto rounded-xl" />
         </div>
         <div class="flex flex-col gap-4">
           <p class="font-mono font-medium text-text text-[11px]">After — Restructured IA</p>
-          <div class="w-full bg-surface rounded-xl aspect-[1114/1813] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Navigation — after state</p>
-          </div>
+          <img src="../images/omniva/nav-after.png"
+               alt="Navigation — restructured IA"
+               class="w-full h-auto rounded-xl" />
         </div>
       </div>
 
@@ -280,18 +301,18 @@
       </p>
 
       <!-- Layout before / after -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 pt-8 md:pt-12">
+      <div class="flex flex-col gap-6 pt-8 md:pt-12">
         <div class="flex flex-col gap-4">
           <p class="font-mono text-[#555] text-[11px]">Before — Heavy modal, all fields at once</p>
           <img src="../images/omniva/cluster-modal-before.png"
                alt="Before: Heavy modal dialog"
-               class="w-full rounded-xl object-cover" />
+               class="w-full h-auto rounded-xl" />
         </div>
         <div class="flex flex-col gap-4">
           <p class="font-mono font-medium text-text text-[11px]">After — Full-page with back + breadcrumb</p>
-          <div class="w-full bg-surface rounded-xl aspect-[1448/1024] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Full-page creation flow — after state</p>
-          </div>
+          <img src="../images/omniva/cluster-fullpage-after.png"
+               alt="After: Full-page cluster creation with back + breadcrumb"
+               class="w-full rounded-xl object-cover" />
         </div>
       </div>
 
@@ -346,12 +367,12 @@
       <div class="flex flex-col gap-3">
         <p class="font-mono text-text text-[11px]">Iteration 1A — "Does guidance change behaviour?" · Empty state</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="w-full bg-surface rounded-xl aspect-[1448/1012] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Iteration 1A — Empty state v1</p>
-          </div>
-          <div class="w-full bg-surface rounded-xl aspect-[1448/1012] flex items-center justify-center">
-            <p class="font-mono text-[#999] text-[10px]">Iteration 1A — Empty state v2</p>
-          </div>
+          <img src="../images/omniva/iteration-1a-empty-state-1.png"
+               alt="Iteration 1A — Guided empty state v1"
+               class="w-full rounded-xl object-cover" />
+          <img src="../images/omniva/iteration-1a-empty-state-2.png"
+               alt="Iteration 1A — Guided empty state v2"
+               class="w-full rounded-xl object-cover" />
         </div>
       </div>
 
@@ -366,9 +387,9 @@
       <!-- Iteration 1B visual -->
       <div class="flex flex-col gap-3">
         <p class="font-mono text-text text-[11px]">Iteration 1B — "Can they see what they own?" · Metric cards + Cluster Overview</p>
-        <div class="w-full bg-surface rounded-xl aspect-[1448/1244] flex items-center justify-center">
-          <p class="font-mono text-[#999] text-[10px]">Iteration 1B — Metric cards + Cluster Overview</p>
-        </div>
+        <img src="../images/omniva/iteration-1b-metric-cards.png"
+             alt="Iteration 1B — Metric cards + Cluster Overview"
+             class="w-full rounded-xl object-cover" />
       </div>
 
       <!-- The gap 1B couldn't close callout -->
@@ -380,10 +401,12 @@
       </div>
 
       <!-- User journey diagram -->
-      <div class="flex flex-col items-start gap-3 py-2">
+      <div class="flex flex-col gap-3 py-2 md:px-[10rem]">
         <p class="font-mono text-[#555] text-[11px]">User journey diagram — activation to fully operational</p>
-        <div class="w-full max-w-[503px] bg-surface rounded-xl aspect-[503/729] flex items-center justify-center">
-          <p class="font-mono text-[#999] text-[10px]">User journey — activation to fully operational</p>
+        <div class="w-full max-w-[35rem] mx-auto overflow-hidden">
+          <img src="../images/omniva/user-journey-diagram.jpg"
+               alt="User journey — activation to fully operational"
+               class="w-full h-auto scale-[1.02] origin-center" />
         </div>
       </div>
 
@@ -493,7 +516,7 @@
         <div class="border border-border rounded-2xl flex flex-col gap-[7px] px-7 py-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">PM · Competitor analysis + CTA positioning</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">Where should the primary action live?</p>
-          <p class="font-sans text-[#333] text-[15px] leading-[1.65]">
+          <p class="font-sans text-text text-[15px] leading-[1.65]">
             PM brought competitor analysis showing most platforms placing the primary action in the top-right corner. I defended top-left positioning — the strongest visual anchor based on F/Z scanning patterns, supported by multiple UX studies I shared. We reviewed the evidence together and aligned on top-left. The decision was grounded in how engineers actually scan a dense operational interface, not convention.
           </p>
         </div>
@@ -501,7 +524,7 @@
         <div class="border border-border rounded-2xl flex flex-col gap-[7px] px-7 py-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Engineering · Sequencing the build</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">The right solution, built in the right order.</p>
-          <p class="font-sans text-[#333] text-[15px] leading-[1.65]">
+          <p class="font-sans text-text text-[15px] leading-[1.65]">
             The signal-driven hub required significant backend work. We sequenced deliberately — foundational iterations first, each one adding a layer the next could build on. Ongoing discovery ran in parallel throughout, validating that we were moving in the right direction. By the time the hub was ready to build, the foundation was in place and the direction was confirmed.
           </p>
         </div>
@@ -509,7 +532,7 @@
         <div class="border border-border rounded-2xl flex flex-col gap-[7px] px-7 py-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Engineering · Defining "healthy"</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">What does system health mean to an engineer?</p>
-          <p class="font-sans text-[#333] text-[15px] leading-[1.65]">
+          <p class="font-sans text-text text-[15px] leading-[1.65]">
             "Healthy" couldn't be implemented until we agreed on a definition. I worked with Engineering to map out what engineers actually needed to know — threshold values, warning vs. critical states, and which signals were reliable enough to surface. The collaborative definition process shaped the final signal hierarchy on the hub.
           </p>
         </div>
@@ -518,51 +541,199 @@
     </div>
   </section>
 
-  <!-- ─── 06 / Outcomes ─── -->
+  <!-- ─── 06 / Process · Phase 3 — AI Agent ─── -->
   <section class="border-b border-border">
     <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
                 px-5 sm:px-10 lg:px-16 xl:px-40
                 py-12 md:py-20">
 
       <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">06 /</span><span class="text-[#555]"> Outcomes</span>
+        <span class="text-accent">06 /</span><span class="text-[#555]"> Process · Phase 3 — AI Agent</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
                  text-[24px] md:text-[32px] lg:text-[36px]
                  leading-[1.15] tracking-[-0.72px]">
-        What shipping incrementally<br>made possible.
+        Engineers could see the signals.<br>They couldn't interpret them.
       </h2>
 
-      <!-- Impact metrics -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-        <div class="border border-border rounded-2xl flex flex-col gap-2 p-6 md:p-7">
-          <p class="font-sans font-extrabold text-accent text-[40px] md:text-[48px] leading-none tracking-tight">35%</p>
-          <p class="font-sans font-semibold text-text text-[15px] leading-[1.4]">Reduction in workflow task time</p>
-          <p class="font-sans text-[#555] text-[13px] leading-[1.55]">Across core operational flows post signal-driven hub launch. Measured via Datadog session analysis.</p>
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        Introduced late — when the operational hub was live but engineers were still escalating to support to understand what their alerts meant. The interaction model had one principle: surface reasoning, preserve control.
+      </p>
+
+      <!-- 3-col: Observation / Context / Consider -->
+      <div class="grid grid-cols-1 md:grid-cols-3 border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-col gap-2 p-[22px] border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Observation /</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5]">What is happening — the signal or event, stated plainly.</p>
         </div>
-        <div class="border border-border rounded-2xl flex flex-col gap-2 p-6 md:p-7">
-          <p class="font-sans font-extrabold text-text text-[40px] md:text-[48px] leading-none tracking-tight">3×</p>
-          <p class="font-sans font-semibold text-text text-[15px] leading-[1.4]">Improvement in session depth</p>
-          <p class="font-sans text-[#555] text-[13px] leading-[1.55]">New engineer activation flow. Homepage engagement tracked across all three iterations before the final hub.</p>
+        <div class="flex flex-col gap-2 p-[22px] border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Context /</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5]">Why it matters in this specific infrastructure environment.</p>
         </div>
-        <div class="border border-border rounded-2xl flex flex-col gap-2 p-6 md:p-7">
-          <p class="font-sans font-extrabold text-text text-[40px] md:text-[48px] leading-none tracking-tight">6 mo</p>
-          <p class="font-sans font-semibold text-text text-[15px] leading-[1.4]">Discovery practice established</p>
-          <p class="font-sans text-[#555] text-[13px] leading-[1.55]">Datadog reporting, session recordings, and monthly user interviews — built and maintained while shipping.</p>
+        <div class="flex flex-col gap-2 p-[22px]">
+          <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Consider /</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5]">Suggested next action. Engineer retains final control. Always framed as a trade-off.</p>
         </div>
       </div>
 
-      <!-- Final platform screenshots -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4">
-        <img src="../images/omniva/screenshot-2026-a.png"
-             alt="Omniva platform — final state"
-             class="w-full rounded-xl object-cover" />
-        <img src="../images/omniva/screenshot-2026-b.png"
-             alt="Omniva platform — AI agent view"
-             class="w-full rounded-xl object-cover" />
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        The same panel served as setup guide on Day 0 and decision support once operational — context-aware, not mode-switched. Reasoning always visible. No black-box answers.
+      </p>
+
+      <!-- Two screenshots: Setup guide + Decision support -->
+      <div class="flex flex-row gap-[22px] justify-center items-start py-4">
+        <div class="flex flex-col gap-4 shrink-0 w-[216px]">
+          <p class="font-mono text-text text-[11px]">Setup guide — Day 0</p>
+          <img src="../images/omniva/AI-guide.png"
+               alt="AI Agent — Setup guide, Day 0"
+               class="w-full h-auto rounded-lg" />
+        </div>
+        <div class="flex flex-col gap-4 shrink-0 w-[229px]">
+          <p class="font-mono text-text text-[11px]">Decision support — Operational</p>
+          <img src="../images/omniva/Ai-decision.png"
+               alt="AI Agent — Decision support, operational state"
+               class="w-full h-auto rounded-lg" />
+        </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ─── 07 / Outcome ─── -->
+  <section class="border-b border-border">
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+                px-5 sm:px-10 lg:px-16 xl:px-40
+                py-12 md:py-20">
+
+      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
+        <span class="text-accent">07 /</span><span class="text-[#555]"> Outcome</span>
+      </p>
+
+      <h2 class="font-sans font-bold text-text
+                 text-[24px] md:text-[32px] lg:text-[36px]
+                 leading-[1.15] tracking-[-0.72px]">
+        From a console engineers<br>didn't trust to one they relied on.
+      </h2>
+
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        The homepage started with effectively zero meaningful session depth — it existed because products have homepages, not because it had a purpose. The target was a surface engineers would return to daily.
+      </p>
+
+      <!-- Outcome table 1 — Session depth -->
+      <div class="grid grid-cols-1 md:grid-cols-3 border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Baseline</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">~0</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Meaningful session depth. Engineers landed and navigated away immediately.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Datadog session recordings</p>
+        </div>
+        <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Target</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">Daily</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Homepage becomes part of the operational workflow engineers check every day.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Success criterion set with PM</p>
+        </div>
+        <div class="flex flex-col gap-[6px] p-7">
+          <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">2x<span class="text-accent">+</span></p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Session depth grew from seconds to minutes. Return visit rate increased. Engineers started sessions on the homepage.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Datadog · vs. 1A baseline · directional</p>
+        </div>
+      </div>
+
+      <!-- Outcome table 2 — CS escalations -->
+      <div class="grid grid-cols-1 md:grid-cols-3 border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Baseline</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">High</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">CS escalations — "how do I start?" weekly occurrences.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">CS team reports</p>
+        </div>
+        <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Target</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">Self-<br>sufficient</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Engineers activate and operate independently without support intervention.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Success criterion set with PM</p>
+        </div>
+        <div class="flex flex-col gap-[6px] p-7">
+          <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
+          <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">−<span class="text-accent">35%</span></p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Ops workflow task completion time reduced. Qualitative shift in engineer confidence visible across interview cohorts.</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Usability testing + telemetry</p>
+        </div>
+      </div>
+
+      <!-- Qualitative shift callout -->
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Qualitative shift</p>
+        <p class="font-sans text-text text-[15px] leading-[1.65]">
+          Before the redesign, engineers struggled to articulate what they would do next in the product. After the signal-driven hub shipped, they could describe their next three steps without prompting. That shift — from confusion to confidence — was the outcome that mattered most.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 08 / What I Learned ─── -->
+  <section class="border-b border-border">
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+                px-5 sm:px-10 lg:px-16 xl:px-40
+                py-12 md:py-20">
+
+      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
+        <span class="text-accent">08 /</span><span class="text-[#555]"> What I Learned</span>
+      </p>
+
+      <h2 class="font-sans font-bold text-text
+                 text-[24px] md:text-[32px] lg:text-[36px]
+                 leading-[1.15] tracking-[-0.72px]">
+        What stayed.
+      </h2>
+
+      <!-- 2×3 learnings grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-col gap-[7px] p-7 border-b border-r border-border">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Fix the structure before the surface</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">IA and navigation work before the homepage redesign meant every iteration built on a foundation engineers already understood. No mental model breaks mid-project. The sequence was the strategy.</p>
+        </div>
+        <div class="flex flex-col gap-[7px] p-7 border-b border-border">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Ship to learn, not just to ship</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">Iteration 1A wasn't the right design — it was the right move. It kept discovery running while the product was live. The evidence it generated changed what was buildable next.</p>
+        </div>
+        <div class="flex flex-col gap-[7px] p-7 border-b border-r border-border">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">UX should guide decisions, not expose data</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">Raw data without context creates paralysis. The interface's job is to make system state legible and the next decision obvious.</p>
+        </div>
+        <div class="flex flex-col gap-[7px] p-7 border-b border-border">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Data creates a shared language</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">Analytics and interview synthesis gave PM and Engineering a common reference point. Design decisions became less about taste and more about evidence.</p>
+        </div>
+        <div class="flex flex-col gap-[7px] p-7 border-r border-border">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Define "healthy" before designing for health</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">You can't design a system state indicator without first agreeing on what the states mean. That definition work is design work too.</p>
+        </div>
+        <div class="flex flex-col gap-[7px] p-7">
+          <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">AI as support, not automation</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">The hardest decision on the agent wasn't the UI pattern — it was deciding what not to automate. Engineers need to understand what's happening, not just be told what to do.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Next Case Study ─── -->
+  <section class="border-b border-border">
+    <div class="max-w-[1440px] mx-auto flex items-center
+                px-5 sm:px-10 lg:px-16 xl:px-40
+                py-[72px]">
+      <div class="flex flex-col gap-[9px]">
+        <p class="font-mono text-[#555] text-[11px] tracking-[1.1px] uppercase">Next case study /</p>
+        <a href="./vmware.html"
+           class="font-sans font-bold text-text text-[20px] md:text-[26px] leading-[1.6] hover:text-accent transition-colors duration-300">
+          VMware · Enterprise UX at 1,000+ users →
+        </a>
+      </div>
     </div>
   </section>
 

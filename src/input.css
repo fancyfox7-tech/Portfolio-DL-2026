@@ -20,6 +20,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Override Tailwind preflight border-color on images to prevent subpixel bleed ── */
+img {
+  border-color: transparent;
+}
+
 /* ── Dot grid — hero section ── */
 .dot-grid {
   background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
