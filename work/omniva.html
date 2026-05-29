@@ -9,9 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../dist/output.css" />
 </head>
-<body class="bg-white text-text font-sans">
+<body class="bg-white text-text font-sans antialiased">
 
   <div class="body-grad-cool"></div>
+  <div class="bg-pulse"></div>
 
   <!-- ─── Nav ─── -->
   <nav class="sticky top-0 z-50 bg-[rgba(255,255,255,0.92)] border-b border-border backdrop-blur-sm">
@@ -33,35 +34,38 @@
 
   <!-- ─── Hero ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-10
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-10 md:gap-14
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                pt-14 md:pt-20 pb-12 md:pb-20">
+                pt-14 md:pt-20 pb-14 md:pb-24">
 
-      <!-- Back link -->
-      <a href="../index.html#work"
-         class="font-mono text-[#666] text-[13px] hover:text-accent transition-colors duration-300">← Work</a>
-
-      <!-- Breadcrumb -->
-      <p class="font-mono text-[#555] text-[12px] tracking-[0.6px]">Case Study · Lead Product Designer · Omniva</p>
-
-      <!-- Title — lines 1–2 Fira Code, line 3 Inter ExtraBold accent (matches Figma) -->
-      <div class="flex flex-col">
-        <p class="font-mono font-normal text-text
-                  text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
-                  leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
-          Turning infrastructure complexity into clarity —
-        </p>
-        <p class="font-sans font-extrabold text-accent
-                  text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
-                  leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
-          for the people behind it.
-        </p>
+      <!-- Back link + breadcrumb -->
+      <div class="flex flex-col gap-2">
+        <a href="../index.html#work"
+           class="font-mono text-[#666] text-[13px] hover:text-accent transition-colors duration-300">← Work</a>
+        <p class="font-mono text-text text-[13px]">01 / Omniva · AI Infrastructure</p>
       </div>
 
-      <!-- Subtitle -->
-      <p class="font-sans text-text text-base md:text-[17px] lg:text-[18px] leading-[1.65] max-w-[620px]">
-        Fast-moving startup, features shipping constantly. At a certain point, the product matures — and that's when the real UX work begins.
-      </p>
+      <!-- Title + Subtitle grouped -->
+      <div class="flex flex-col gap-4 md:gap-6">
+        <!-- Title — lines 1–2 Fira Code, line 3 Inter ExtraBold accent (matches Figma) -->
+        <div class="flex flex-col">
+          <p class="font-mono font-normal text-text
+                    text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
+                    leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
+            Turning infrastructure complexity into clarity —
+          </p>
+          <p class="font-sans font-extrabold text-accent
+                    text-[28px] sm:text-[36px] lg:text-[44px] xl:text-[48px]
+                    leading-[1.25] xl:leading-[1.45] tracking-[-0.72px]">
+            for the people behind it.
+          </p>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="font-sans text-text text-base md:text-[17px] lg:text-[18px] leading-[1.65] max-w-[620px]">
+          Fast-moving startup, features shipping constantly. At a certain point, the product matures — and that's when the real UX work begins.
+        </p>
+      </div>
 
       <!-- Metadata cards -->
       <div class="grid grid-cols-2 md:grid-cols-4 border border-border rounded-2xl overflow-hidden">
@@ -106,12 +110,12 @@
 
   <!-- ─── 01 / Context ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">01 /</span><span class="text-[#555]"> Context</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">01 /</span><span class="text-text"> Context</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -131,17 +135,10 @@
              class="w-full h-auto scale-[1.02] origin-center" />
       </div>
 
-      <!-- Context screenshot — max 52.8125rem centered, natural height -->
-      <div class="w-full max-w-[52.8125rem] mx-auto rounded-2xl overflow-hidden">
-        <img src="../images/omniva/context-screenshot.png"
-             alt="Platform — inherited state before redesign"
-             class="w-full h-auto" />
-      </div>
-
       <!-- 2-col: body text + before images -->
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 pt-2 md:pt-4">
         <!-- Left: body + user quotes -->
-        <div class="flex flex-col gap-5 flex-1 min-w-0">
+        <div class="flex flex-col gap-6 flex-1 min-w-0">
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
             Omniva is an AI-native cloud infrastructure console. Engineers use it to manage clusters, storage, and workloads — operations where confusion has a real cost.
           </p>
@@ -184,12 +181,12 @@
 
   <!-- ─── 02 / My Role ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">02 /</span><span class="text-[#555]"> My Role</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">02 /</span><span class="text-text"> My Role</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -200,7 +197,7 @@
 
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 pt-2">
         <!-- Left: body -->
-        <div class="flex flex-col gap-5 flex-1 min-w-0">
+        <div class="flex flex-col gap-6 flex-1 min-w-0">
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
             I joined Omniva at the very beginning — before there was a product. Three years, three phases.
           </p>
@@ -217,7 +214,7 @@
 
         <!-- Right: callout + timeline -->
         <div class="flex flex-col gap-6 md:w-[420px] lg:w-[460px] shrink-0 md:pt-4">
-          <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+          <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
             <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Validation loop</p>
             <p class="font-sans text-text text-[15px] leading-[1.65]">
               Analytics → wireframe → engineering feasibility → client validation → iteration → ship → repeat. No concept went in front of users without engineering alignment on feasibility first.
@@ -246,12 +243,12 @@
 
   <!-- ─── 03 / Process · Phase 1 — Foundation ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">03 /</span><span class="text-[#555]"> Process · Phase 1 — Foundation</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">03 /</span><span class="text-text"> Process · Phase 1 — Foundation</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -270,27 +267,19 @@
       </div>
 
       <!-- Why the footer mattered callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] max-w-[860px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl max-w-[860px]">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Why the footer mattered</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Legal and resource links — Service Terms, Privacy Policy, SLA, Developer Portal — had ended up in the footer. Right content, wrong location. No comparable infrastructure platform had this pattern. Competitor analysis confirmed it. We moved them to the header under Docs &amp; Legal, where they're accessible without disrupting the operational workflow.
         </p>
       </div>
 
-      <!-- Nav before / after comparison -->
-      <div class="flex flex-col gap-8 py-8 md:py-12">
-        <div class="flex flex-col gap-4">
-          <p class="font-mono text-[#555] text-[11px]">Before — Inherited navigation</p>
-          <img src="../images/omniva/nav-before.png"
-               alt="Navigation — before state"
-               class="w-full h-auto rounded-xl" />
-        </div>
-        <div class="flex flex-col gap-4">
-          <p class="font-mono font-medium text-text text-[11px]">After — Restructured IA</p>
-          <img src="../images/omniva/nav-after.png"
-               alt="Navigation — restructured IA"
-               class="w-full h-auto rounded-xl" />
-        </div>
+      <!-- Nav after comparison -->
+      <div class="flex flex-col gap-4 py-8 md:py-12">
+        <p class="font-mono font-medium text-text text-[11px]">After — Restructured IA</p>
+        <img src="../images/omniva/nav-after.png"
+             alt="Navigation — restructured IA"
+             class="w-full h-auto rounded-xl" />
       </div>
 
       <!-- Layout pattern -->
@@ -321,12 +310,12 @@
 
   <!-- ─── 04 / Process · Phase 2 — Homepage ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">04 /</span><span class="text-[#555]"> Process · Phase 2 — Homepage</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">04 /</span><span class="text-text"> Process · Phase 2 — Homepage</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -377,7 +366,7 @@
       </div>
 
       <!-- What the data showed callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">What the data showed</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Session depth improved for new engineers. But recordings revealed something unexpected — engineers with existing infrastructure were ignoring the homepage entirely. They'd land, see a CTA they didn't need, and navigate away. One answer, two completely different needs.
@@ -393,7 +382,7 @@
       </div>
 
       <!-- The gap 1B couldn't close callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">The gap 1B couldn't close</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Engineers could see their clusters were running. They still couldn't tell if something was wrong. There was no health signal — no way to know if 94% GPU utilisation was expected or critical. Seeing infrastructure and understanding system state are different problems. 1B solved the first. The signal-driven hub solved the second.
@@ -433,7 +422,7 @@
       </div>
 
       <!-- The right solution, in the right order callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">The right solution, in the right order.</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Every deprioritisation was a conscious choice — sequenced for when the system could support it reliably. That's what made the signal-driven hub possible.
@@ -482,7 +471,7 @@
       </div>
 
       <!-- One more structural change — Alerts callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">One more structural change — Alerts</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Testing the new homepage revealed that Alerts — still nested under Monitoring — weren't being found intuitively. Engineers looked for them directly, as a standalone action item. We promoted Alerts to top-level navigation. The usability data made the case clearly.
@@ -494,12 +483,12 @@
 
   <!-- ─── 05 / Collaboration ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">05 /</span><span class="text-[#555]"> Collaboration</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">05 /</span><span class="text-text"> Collaboration</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -543,12 +532,12 @@
 
   <!-- ─── 06 / Process · Phase 3 — AI Agent ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">06 /</span><span class="text-[#555]"> Process · Phase 3 — AI Agent</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">06 /</span><span class="text-text"> Process · Phase 3 — AI Agent</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -602,12 +591,12 @@
 
   <!-- ─── 07 / Outcome ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">07 /</span><span class="text-[#555]"> Outcome</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">07 /</span><span class="text-text"> Outcome</span>
       </p>
 
       <h2 class="font-sans font-bold text-text
@@ -665,7 +654,7 @@
       </div>
 
       <!-- Qualitative shift callout -->
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px]">
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Qualitative shift</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
           Before the redesign, engineers struggled to articulate what they would do next in the product. After the signal-driven hub shipped, they could describe their next three steps without prompting. That shift — from confusion to confidence — was the outcome that mattered most.
@@ -677,12 +666,12 @@
 
   <!-- ─── 08 / What I Learned ─── -->
   <section class="border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-6 md:gap-8
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-12
                 px-5 sm:px-10 lg:px-16 xl:px-40
-                py-12 md:py-20">
+                py-14 md:py-24">
 
-      <p class="font-mono text-[11px] tracking-[1.1px] uppercase">
-        <span class="text-accent">08 /</span><span class="text-[#555]"> What I Learned</span>
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">08 /</span><span class="text-text"> What I Learned</span>
       </p>
 
       <h2 class="font-sans font-bold text-text

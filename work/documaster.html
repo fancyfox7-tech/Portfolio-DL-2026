@@ -1,26 +1,533 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omniva — DL_</title>
+  <title>Documaster · Records Management — DL_</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../dist/output.css" />
 </head>
-<body class="bg-bg text-text font-sans">
+<body class="bg-white text-text font-sans antialiased">
 
-  <!-- Nav (with back button) -->
-  <nav></nav>
+  <div class="body-grad-cool"></div>
+  <div class="bg-pulse"></div>
 
-  <!-- Case Study Hero -->
-  <section></section>
+  <!-- ─── Nav ─── -->
+  <nav class="sticky top-0 z-50 bg-[rgba(255,255,255,0.92)] border-b border-border backdrop-blur-sm">
+    <div class="max-w-[1440px] mx-auto flex h-[70px] items-center justify-between px-5 sm:px-10 lg:px-16 xl:px-40">
+      <span class="font-mono font-medium text-text text-[15px] tracking-[0.6px]">[DL_]</span>
+      <div class="hidden sm:flex items-center gap-6 md:gap-8 font-mono text-text text-[13px]">
+        <a href="../index.html#work"       class="hover:text-accent transition-colors duration-300">Work</a>
+        <a href="../index.html#how-i-work" class="hidden md:inline hover:text-accent transition-colors duration-300">Process</a>
+        <a href="../index.html#about"      class="hover:text-accent transition-colors duration-300">About</a>
+        <a href="../index.html#contact"    class="hover:text-accent transition-colors duration-300">Contact</a>
+      </div>
+      <a href="https://drive.google.com/uc?export=download&id=1XcTO_O9p-34pGpT_8CcOZwiL8PDdYiPG"
+         target="_blank" rel="noopener noreferrer"
+         class="border border-text font-mono text-text text-[12px] px-4 py-[7px] rounded-full hover:border-accent hover:text-accent transition-colors duration-300">
+        Download CV
+      </a>
+    </div>
+  </nav>
 
-  <!-- Content Sections -->
+  <!-- ─── Page content ─── -->
+  <div class="max-w-[1440px] mx-auto flex flex-col gap-[60px] md:gap-[96px]
+              px-5 sm:px-10 lg:px-16 xl:px-40
+              pt-[60px] md:pt-[100px] pb-[96px] md:pb-[140px]">
 
-  <!-- Footer -->
-  <footer></footer>
+    <!-- Back link + breadcrumb -->
+    <div class="flex flex-col gap-2">
+      <a href="../index.html#work"
+         class="font-mono text-[#666] text-[13px] hover:text-accent transition-colors duration-300">← Work</a>
+      <p class="font-mono text-text text-[13px]">03 / Documaster · Records Management</p>
+    </div>
+
+    <!-- ─── Hero ─── -->
+    <div class="flex flex-col gap-8 md:gap-10">
+      <div class="flex flex-col leading-[1.08] tracking-[-1.5px]">
+        <p class="font-mono font-normal text-text
+                  text-[28px] sm:text-[40px] lg:text-[52px] xl:text-[64px]">
+          Records management,
+        </p>
+        <p class="font-sans font-extrabold text-accent
+                  text-[28px] sm:text-[40px] lg:text-[52px] xl:text-[64px]">
+          built from zero.
+        </p>
+      </div>
+
+      <p class="font-sans text-text text-[16px] md:text-[18px] leading-[1.75] w-full max-w-[680px]">
+        Documents were everywhere. Finding them depended on memory, not system. I was the first designer on this product — from interaction model to the component library that served two separate products.
+      </p>
+
+      <!-- Meta row -->
+      <div class="flex flex-col sm:flex-row border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-[1_0_0] flex-col gap-[6px] px-5 sm:px-6 py-6 sm:py-8 border-b sm:border-b-0 sm:border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[0.88px] uppercase">Platform</p>
+          <p class="font-sans font-semibold text-text text-[13px] md:text-[14px] leading-[1.45]">Records management &amp; archiving SaaS</p>
+        </div>
+        <div class="flex flex-[1_0_0] flex-col gap-[6px] px-5 sm:px-6 py-6 sm:py-8 border-b sm:border-b-0 sm:border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[0.88px] uppercase">Scope</p>
+          <p class="font-sans font-semibold text-text text-[13px] md:text-[14px] leading-[1.45]">0→1 SaaS + design system</p>
+        </div>
+        <div class="flex flex-[1_0_0] flex-col gap-[6px] px-5 sm:px-6 py-6 sm:py-8 border-b sm:border-b-0 sm:border-r border-border">
+          <p class="font-mono text-[#555] text-[10px] tracking-[0.88px] uppercase">My Role</p>
+          <p class="font-sans font-semibold text-text text-[13px] md:text-[14px] leading-[1.45]">Product Designer · sole designer</p>
+        </div>
+        <div class="flex flex-[1_0_0] flex-col gap-[6px] px-5 sm:px-6 py-6 sm:py-8">
+          <p class="font-mono text-[#555] text-[10px] tracking-[0.88px] uppercase">Pilots</p>
+          <p class="font-sans font-semibold text-text text-[13px] md:text-[14px] leading-[1.45]">Stokke · Knutsen OAS Shipping</p>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2">
+        <span class="border border-border font-mono text-text text-[12px] px-3 py-[5px] rounded-full">[Product Design_]</span>
+        <span class="border border-border font-mono text-text text-[12px] px-3 py-[5px] rounded-full">[Mobile First_]</span>
+        <span class="border border-border font-mono text-text text-[12px] px-3 py-[5px] rounded-full">[Design System_]</span>
+        <span class="border border-border font-mono text-text text-[12px] px-3 py-[5px] rounded-full">[ML Classification_]</span>
+        <span class="border border-border font-mono text-text text-[12px] px-3 py-[5px] rounded-full">[Enterprise SaaS_]</span>
+      </div>
+
+      <!-- Hero image -->
+      <div class="w-full">
+        <img src="../images/documaster/hero.png"
+             alt="Documaster — Records Management SaaS"
+             class="w-full h-auto rounded-2xl" />
+      </div>
+    </div>
+
+    <!-- ─── 01 / Context ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">01 /</span>&nbsp;<span class="text-text">Context</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        The folder tree had failed.
+      </h2>
+
+      <div class="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
+        <!-- Left: body -->
+        <div class="flex flex-col gap-6 font-sans text-text text-[16px] md:text-[17px] leading-[1.75] w-full md:w-[680px] md:shrink-0">
+          <p>Large organisations in regulated industries share a common problem: documents exist everywhere and belong nowhere. Email threads, local drives, shared folders — all accumulating in parallel, organised by whoever created the file, classified by convention rather than logic.</p>
+          <p>We tried the obvious fix first — limiting nesting to three levels. It failed validation with both pilot clients. Engineers at Knutsen still couldn't find the right version of a drawing. Contracts managers at Stokke still depended on knowing where someone had decided to file things months ago. The folder structure wasn't the implementation problem. It was the wrong model entirely.</p>
+          <p>Discovery with Stokke and Knutsen surfaced three separate problems. Documents were being missed — notifications lived outside the system, in email and Slack. Access was assumed, not stated — people shared files informally and permissions were set after the fact, if at all. And versioning was manual — when multiple people worked on the same documentation, finding the current approved version required institutional memory, not system logic.</p>
+        </div>
+
+        <!-- Right: before / after -->
+        <div class="flex-1 min-w-0 border border-border rounded-xl overflow-hidden flex flex-col gap-0.5">
+          <div class="bg-white flex flex-col gap-3 p-[22px]">
+            <p class="font-mono text-[#777] text-[10px] tracking-[0.8px] uppercase">Before</p>
+            <p class="font-sans text-text text-[15px] leading-[1.6]">Users needed to know exact folder paths to find documents. The same file existed in multiple places. Access was assumed, not stated. Retrieval depended on institutional memory.</p>
+          </div>
+          <div class="bg-surface flex items-stretch">
+            <div class="w-[3px] bg-accent shrink-0"></div>
+            <div class="flex flex-col gap-3 p-[22px] flex-1 min-w-0">
+              <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">After</p>
+              <p class="font-sans text-text text-[15px] leading-[1.6]">Users search by meaning, not location. Documents are classified on ingestion. Access is assigned at the moment of approval. Trusted documents are findable in under 30 seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- ─── 02 / My Role ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">02 /</span>&nbsp;<span class="text-text">My Role</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        First designer on the product.
+      </h2>
+      <div class="flex flex-col gap-6 font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        <p>I had been at Documaster for about a year, working on the Noark public sector platform, when the decision was made to build a new private sector SaaS product. I became the first and only designer on it from day one.</p>
+        <p>The team operated as a product trio: Product Owner, Engineering Lead, and me. I owned the product definition, interaction model, core workflows, access control design, and the Figma component library — built using atomic design principles to serve both the Noark platform and the new SaaS product from a single shared foundation.</p>
+        <p>Later, with a frontend-focused designer and a developer, we transitioned that Figma library into a living Storybook system: components documented and maintained alongside code.</p>
+      </div>
+    </div>
+
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- ─── 03 / Process ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">03 /</span>&nbsp;<span class="text-text">Process</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        Reframe the problem. Then solve it.
+      </h2>
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        The first instinct — build a better folder structure — failed every success criterion we set. We needed users to find the right document in under 30 seconds. We needed classification to be consistent and reusable across teams with very different data. We explored restricted folder trees, hybrid tagging approaches, category-based hierarchies. None of them solved the underlying problem: users couldn't agree on how to classify things upfront, and no folder system could compensate for that inconsistency at scale.
+      </p>
+
+      <!-- Core challenge callout -->
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
+        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Core design challenge</p>
+        <p class="font-sans text-text text-[15px] leading-[1.65]">
+          How can organisations classify, find, and reuse documents without relying on deep folder hierarchies — while still respecting sensitivity, access, and trust?
+        </p>
+      </div>
+
+      <!-- Core product flow -->
+      <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full pt-4 md:pt-6">
+        <img src="../images/documaster/core-product-flow.png"
+             alt="Core product flow — document lifecycle from ingestion to retrieval"
+             class="w-full h-auto rounded-xl" />
+        <p class="font-mono text-text text-[12px] leading-[1.5]">
+          Core product flow. Documents enter, get classified, move to Inbox for human review or directly to Records if confidence is high enough. Retrieval replaces the folder hierarchy entirely.
+        </p>
+      </div>
+
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        The shift that unlocked everything was reframing the problem. This wasn't a storage problem. It was a retrieval and trust problem. If users could find documents by meaning rather than location, and trust that what they found was the correct, approved version — the folder structure became irrelevant.
+      </p>
+
+      <!-- System architecture -->
+      <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full pt-2 md:pt-4">
+        <img src="../images/documaster/system-architecture.png"
+             alt="System architecture — Edge Processing, ML classification pipeline"
+             class="w-full h-auto" />
+        <p class="font-mono text-text text-[12px] leading-[1.5]">
+          System architecture. The Edge Processing component — a standalone Python service handling PDF previews via filesystem polling — explained why document preview for Knutsen's large binary files was a genuine technical constraint.
+        </p>
+      </div>
+
+      <!-- Confidence level decision — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">The confidence level decision</h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          This was the most consequential call in the project. Engineering's first proposal was to surface the ML confidence score as a percentage — technically accurate, but meaningless in practice. A document at 73% versus 81% confidence tells a contracts manager or compliance officer nothing actionable.
+        </p>
+
+        <!-- Rejected -->
+        <div class="border border-border rounded-xl overflow-hidden flex items-stretch">
+          <div class="w-[3px] bg-[#ccc] shrink-0"></div>
+          <div class="flex flex-col gap-2 px-[22px] py-[22px]">
+            <p class="font-mono text-[#999] text-[10px] tracking-[0.8px] uppercase">Rejected</p>
+            <p class="font-sans font-bold text-text text-[15px]">Surface the raw percentage</p>
+            <p class="font-sans text-[#555] text-[15px] leading-[1.6]">Transparent, accurate, technically honest. In practice: a number users couldn't act on.</p>
+          </div>
+        </div>
+
+        <!-- Chosen -->
+        <div class="bg-surface rounded-xl overflow-hidden flex items-stretch">
+          <div class="w-[3px] bg-accent shrink-0"></div>
+          <div class="flex flex-col gap-2 px-[22px] py-[22px]">
+            <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Chosen</p>
+            <p class="font-sans font-bold text-text text-[15px]">Three-level confidence model</p>
+            <p class="font-sans text-[#555] text-[15px] leading-[1.6]">High-confidence → Records directly. Medium and low → Inbox for human review, correction, approval. Users see signal, not noise. They act — the system learns.</p>
+          </div>
+        </div>
+
+        <!-- WebIT auto-classification -->
+        <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full pt-2">
+          <img src="../images/documaster/webbit-auto-classification.png"
+               alt="Auto-classification in action — WebIT 2018 presentation"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-text text-[12px] leading-[1.5]">
+            Auto-classification in action · WebIT 2018 presentation · based on shipped product
+          </p>
+        </div>
+      </div>
+
+      <!-- Access control — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-10 md:pt-14">
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          Access control followed a similar logic. Discovery made clear this was one of the biggest user pain points: documents were shared informally, permissions were assumed rather than stated. I designed access control into the classification flow itself — not as a separate admin function. Assigning access by team or individual happens at the moment a document enters the system, because that is when the question is most relevant.
+        </p>
+        <div class="flex flex-col gap-3 max-w-[58.5rem] mx-auto w-full">
+          <img src="../images/documaster/access-control.png"
+               alt="Access control — integrated into the classification flow"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-text text-[12px] leading-[1.5]">
+            Access control surfaced at classification time — not as a separate admin panel. Permissions assigned when the document enters the system.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- ─── 04 / Show the Work ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">04 /</span>&nbsp;<span class="text-text">Show the Work</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        Three surfaces. Three decisions.
+      </h2>
+
+      <!-- Inbox — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Inbox — a decision space, not a to-do list
+        </h3>
+        <div class="flex flex-col gap-5 font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          <p>Documents appear here because the system isn't certain enough to act alone. Confidence level drives prioritisation, not arrival time. Users review classification, adjust tags, set access permissions — then approve or reclassify.</p>
+          <p>Mobile-first was deliberate. Sales people at Stokke reviewed and approved documents on the move. The Inbox had to work in a pocket, not only on a desktop.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <img src="../images/documaster/inbox.png"
+               alt="Inbox — confidence model in action"
+               class="w-full h-auto rounded-xl shadow-[0_4px_32px_rgba(0,0,0,0.12)]" />
+          <div class="flex items-center justify-between gap-4">
+            <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+              Inbox · confidence model in action. Classification, tags, and access permissions editable before approval.
+            </p>
+            <span class="font-mono text-accent text-[11px] shrink-0">Inbox</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Records — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Records — flat, trusted, searchable
+        </h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          No folders. Only approved, trusted documents. Faceted filters reflect business context — document type, business domain, owner, time range — not system metadata. The goal: under 30 seconds to the right document, without knowing where it was stored.
+        </p>
+        <div class="flex flex-col gap-3">
+          <img src="../images/documaster/records.png"
+               alt="Records — flat library with faceted retrieval"
+               class="w-full h-auto rounded-xl shadow-[0_4px_32px_rgba(0,0,0,0.12)]" />
+          <div class="flex items-center justify-between gap-4">
+            <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+              Records · flat library, faceted retrieval. No folders — search by meaning, not location.
+            </p>
+            <span class="font-mono text-accent text-[11px] shrink-0">Records</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full">
+          <img src="../images/documaster/webbit-faceted-search.png"
+               alt="Faceted dynamic retrieval — tablet 2018"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+            Faceted dynamic retrieval · tablet · 2018
+          </p>
+        </div>
+      </div>
+
+      <!-- Metadata — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Metadata &amp; access control — iterated toward clarity
+        </h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          The metadata screen was one of the most iterated surfaces. Classification, file type, who has access, activity log — all in one place. Iterations moved from a dense information layout toward a cleaner hierarchy: critical information first, editing inline, access management surfaced rather than buried.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 md:gap-10">
+          <div class="flex flex-col gap-3 max-w-[18.5rem]">
+            <img src="../images/documaster/metadata-v1.png"
+                 alt="Metadata viewer — iteration 1, denser layout"
+                 class="w-full h-auto rounded-xl" />
+            <p class="font-mono text-[#666] text-[11px]">Iteration 1 · denser layout</p>
+          </div>
+          <div class="flex flex-col gap-3 max-w-[18.5rem]">
+            <img src="../images/documaster/metadata-v2.png"
+                 alt="Metadata viewer — iteration 2, cleaner hierarchy"
+                 class="w-full h-auto rounded-xl" />
+            <p class="font-mono text-[#666] text-[11px]">Iteration 2 · cleaner hierarchy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Activity — documents in their project context
+        </h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          Documents don't exist in isolation. The Activity view gives users a chronological history of events and documents together. System items — archived contracts, signed agreements — are interleaved with user-added business events. This served four overlapping needs: project audit trail, team visibility, compliance and e-discovery, and human context the system can't capture automatically.
+        </p>
+        <div class="flex flex-col gap-3">
+          <img src="../images/documaster/activity.png"
+               alt="Activity — audit trail and business context"
+               class="w-full h-auto rounded-xl shadow-[0_4px_32px_rgba(0,0,0,0.12)]" />
+          <div class="flex items-center justify-between gap-4">
+            <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+              Activity · audit trail + business context. System events and user-added entries interleaved chronologically.
+            </p>
+            <span class="font-mono text-accent text-[11px] shrink-0">Activity</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full">
+          <img src="../images/documaster/webbit-activity.png"
+               alt="Activity — original product screen, WebIT 2018"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+            Activity · original product screens · WebIT 2018 presentation
+          </p>
+        </div>
+      </div>
+
+      <!-- Silent archival — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Silent archival — the system works around the user
+        </h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          Documents are indexed automatically as they arrive — from email, drive, ERP, local storage. The user's only signal is the Inbox badge count. No interruption, no manual filing step.
+        </p>
+        <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full">
+          <img src="../images/documaster/webbit-silent-archival.png"
+               alt="Silent archival — Inbox badge"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+            Silent archival · Inbox badge · original product screen · 2018
+          </p>
+        </div>
+      </div>
+
+      <!-- Word add-in — subsection -->
+      <div class="flex flex-col gap-6 md:gap-8 pt-12 md:pt-16">
+        <h3 class="font-sans font-bold text-text text-[18px] md:text-[20px] leading-[1.4]">
+          Word add-in — knowledge reuse at the point of work
+        </h3>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+          The add-in brought retrieval directly into Microsoft Word. Highlight text, right-click, search Documaster — related approved documents surface in a sidebar without leaving the document.
+        </p>
+        <div class="flex flex-col gap-3 max-w-[58.75rem] mx-auto w-full">
+          <img src="../images/documaster/webbit-word-addin.png"
+               alt="Word add-in — Search with Documaster"
+               class="w-full h-auto rounded-xl" />
+          <p class="font-mono text-[#666] text-[12px] leading-[1.5]">
+            Word add-in · "Search with Documaster" · 2018
+          </p>
+        </div>
+      </div>
+
+      <!-- Screens note -->
+      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl mt-4">
+        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">A note on these screens</p>
+        <p class="font-sans text-text text-[15px] leading-[1.65]">
+          The screens in this section are from a conference presentation prepared for WebIT 2018, based on the shipped product. Visual polish was updated for a new client audience — the interaction decisions are the same.
+        </p>
+      </div>
+    </div>
+
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- ─── 05 / Collaboration ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">05 /</span>&nbsp;<span class="text-text">Collaboration</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        Engineering defines what's possible.<br class="hidden md:block" />Design defines what's usable.
+      </h2>
+      <div class="flex flex-col gap-6 font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        <p>The product trio model meant design, product, and engineering were in constant contact. Decisions moved fast because the people who needed to agree were always in the room.</p>
+        <p>The confidence level conversation is the clearest example. Engineering came with a technically sound proposal — show the percentage, be transparent about the system's certainty. I came with the user perspective: what does a percentage actually mean to someone whose job is document management, not machine learning? The Product Owner held the business frame: users needed to trust the system enough to act without reviewing everything manually. The three-level model emerged from that triangulation — not from any single discipline.</p>
+        <p>This pattern repeated throughout the project. Engineering would surface how the backend logic worked — precise, accurate, internally consistent. My job was consistently to translate that into something a user could act on without needing to understand the system behind it. Not hiding complexity, but absorbing it so users didn't have to.</p>
+        <p>The design system collaboration worked differently. I built the Figma library using atomic principles to serve both products from a shared foundation. When it came time to translate it into code, I worked with a frontend-focused designer and a developer to build it into Storybook — maintaining design intent through the translation.</p>
+      </div>
+    </div>
+
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- ─── 06 / Outcome ─── -->
+    <div class="flex flex-col gap-8 md:gap-12">
+      <p class="font-mono text-[13px]">
+        <span class="text-accent">06 /</span>&nbsp;<span class="text-text">Outcome</span>
+      </p>
+      <h2 class="font-sans font-bold text-text text-[24px] md:text-[32px] leading-[1.15] tracking-[-0.5px]">
+        Two industries. One system. It held.
+      </h2>
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        The product launched as a pilot with Stokke and Knutsen OAS Shipping. Two industries, two very different data profiles — Stokke's text-heavy contracts and Knutsen's large binary engineering files. The system handled both. That cross-industry validation confirmed the classification model was robust, not just tuned for one context.
+      </p>
+
+      <!-- Stats -->
+      <div class="flex flex-col sm:flex-row border border-border rounded-2xl overflow-hidden">
+        <div class="flex flex-[1_0_0] flex-col gap-3 px-6 py-8 md:py-10 border-b sm:border-b-0 sm:border-r border-border">
+          <p class="font-sans font-extrabold text-accent text-[36px] md:text-[40px] leading-none">−28%</p>
+          <p class="font-sans text-text text-[14px] leading-[1.55]">Reduction in task completion time vs. folder-based navigation. Confirmed across both pilots — Stokke's text contracts and Knutsen's binary CAD files.</p>
+          <p class="font-mono text-[#888] text-[11px] leading-[1.5]">Measured against folder-based navigation baselines established during discovery — timed task completion with the same document retrieval scenarios.</p>
+        </div>
+        <div class="flex flex-[1_0_0] flex-col gap-3 px-6 py-8 md:py-10 border-b sm:border-b-0 sm:border-r border-border">
+          <p class="font-sans font-extrabold text-accent text-[36px] md:text-[40px] leading-none">2</p>
+          <p class="font-sans text-text text-[14px] leading-[1.55]">Enterprise pilot clients across different industries — commercial contracts and heavy technical documentation.</p>
+        </div>
+        <div class="flex flex-[1_0_0] flex-col gap-3 px-6 py-8 md:py-10">
+          <p class="font-sans font-extrabold text-accent text-[36px] md:text-[40px] leading-none">2×</p>
+          <p class="font-sans text-text text-[14px] leading-[1.55]">Products served by one shared component library — Noark public sector platform and the new private sector SaaS.</p>
+        </div>
+      </div>
+
+      <!-- Prototype CTA -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border border-border rounded-2xl px-6 py-6 md:px-8 md:py-7">
+        <div class="flex flex-col gap-1">
+          <p class="font-sans font-semibold text-text text-[16px] leading-[1.4]">View the interactive prototype</p>
+          <p class="font-sans text-text text-[14px] leading-[1.55]">Rebuilt in Lovable — core flows: document ingestion, classification, Inbox review, and Records retrieval.</p>
+        </div>
+        <div class="flex flex-col items-start sm:items-end gap-2 shrink-0">
+          <a href="https://exact-doc-review.lovable.app/"
+             target="_blank" rel="noopener noreferrer"
+             class="bg-text text-white font-sans text-[14px] px-5 py-[10px] rounded-full hover:bg-accent transition-colors duration-300 whitespace-nowrap">
+            Open prototype →
+          </a>
+          <p class="font-mono text-[11px] opacity-[0.35]">Prototype · not the original product · core interaction decisions preserved</p>
+        </div>
+      </div>
+
+      <!-- Learnings -->
+      <div class="flex flex-col mt-2">
+        <div class="h-px bg-border w-full"></div>
+        <div class="flex gap-6 items-start py-8 md:py-10">
+          <p class="font-mono text-accent text-[13px] shrink-0">01 /</p>
+          <div class="flex flex-col gap-2 flex-1 min-w-0">
+            <p class="font-sans font-bold text-text text-[16px]">Engineering accuracy ≠ user clarity.</p>
+            <p class="font-sans text-text text-[15px] leading-[1.65]">The confidence percentage was technically honest. It was not usable. The design challenge was absorbing system complexity so users got what they needed to act — not everything the system knew. I now name this tension explicitly at the start of any project involving ML or automated systems.</p>
+          </div>
+        </div>
+        <div class="h-px bg-border w-full"></div>
+        <div class="flex gap-6 items-start py-8 md:py-10">
+          <p class="font-mono text-accent text-[13px] shrink-0">02 /</p>
+          <div class="flex flex-col gap-2 flex-1 min-w-0">
+            <p class="font-sans font-bold text-text text-[16px]">Two clients stress-tested what one couldn't.</p>
+            <p class="font-sans text-text text-[15px] leading-[1.65]">Stokke's contracts were semantically consistent — classification was reliable. Knutsen's engineering drawings were a different problem: large binary files, less textual content for the ML to index. Designing for both without splitting into two products forced decisions that turned out to be the right ones.</p>
+          </div>
+        </div>
+        <div class="h-px bg-border w-full"></div>
+        <div class="flex gap-6 items-start py-8 md:py-10">
+          <p class="font-mono text-accent text-[13px] shrink-0">03 /</p>
+          <div class="flex flex-col gap-2 flex-1 min-w-0">
+            <p class="font-sans font-bold text-text text-[16px]">What I'd do differently.</p>
+            <p class="font-sans text-text text-[15px] leading-[1.65]">Push harder earlier for access to pilot users. Most assumptions were right — but edge cases around Knutsen's technical files surfaced late. Earlier access would have changed decisions around confidence thresholds and document preview handling.</p>
+          </div>
+        </div>
+        <div class="h-px bg-border w-full"></div>
+      </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="h-px bg-border w-full"></div>
+
+    <!-- Next project -->
+    <div class="flex items-center py-[40px]">
+      <div class="flex flex-col gap-[6px]">
+        <p class="font-mono text-[#555] text-[12px]">Next project</p>
+        <a href="./portfolio.html"
+           class="font-sans font-semibold text-text text-[20px] hover:text-accent transition-colors duration-300">
+          Building this portfolio →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── Footer ─── -->
+  <footer class="bg-white border-t border-border">
+    <div class="max-w-[1440px] mx-auto flex h-[80px] items-center justify-between
+                px-5 sm:px-10 lg:px-16 xl:px-40">
+      <span class="font-mono font-medium text-text text-[14px] tracking-[0.56px]">DL_ · 2026</span>
+      <span class="font-sans text-text text-[13px]">I simplify complexity for people.</span>
+    </div>
+  </footer>
 
   <script src="../js/main.js"></script>
 </body>
