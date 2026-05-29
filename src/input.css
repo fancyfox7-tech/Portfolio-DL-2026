@@ -195,6 +195,40 @@ img {
   transform: scaleX(1);
 }
 
+/* ── Section-scoped gradients — warm + cool, matching hero intensity ── */
+.bg-cool-local {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 65% at 18% 78%, #2D4A7A, transparent);
+  animation: heroCoolPulse 8s ease-in-out infinite -4s;
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-pulse-local {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 70% at 65% 35%, #A63D1F, transparent);
+  animation: heroWarmPulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Hero caret ── */
+@keyframes caret-blink {
+  0%, 50%  { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.75em;
+  background: var(--color-text);
+  margin-left: 4px;
+  vertical-align: middle;
+  opacity: 0.45;
+  animation: caret-blink 1.2s step-end infinite;
+}
+
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -202,6 +236,9 @@ img {
   .hero-grad-warm, .hero-grad-cool { animation: none; }
   .hero-grad-warm { opacity: 0.06; }
   .hero-grad-cool { opacity: 0.04; }
+  .bg-pulse-local { animation: none; opacity: 0.08; }
+  .bg-cool-local  { animation: none; opacity: 0.05; }
+  .caret { animation: none; opacity: 1; }
   .article-card::before { animation: none; opacity: 0.04; }
   .card, .article-card {
     transition: box-shadow 0.35s var(--ease-standard);

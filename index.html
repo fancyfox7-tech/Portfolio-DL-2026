@@ -62,35 +62,11 @@
                     leading-[1.05] tracking-tight xl:tracking-[-1.92px]">
             I simplify complexity
           </p>
-          <div class="flex items-end justify-center md:justify-start">
-            <p class="font-sans font-extrabold text-accent
-                      text-[40px] sm:text-[52px] lg:text-[64px] xl:text-[72px]
-                      leading-none tracking-tight xl:tracking-[-2.16px]">
-              for people.
-            </p>
-            <div class="flex items-center justify-center
-                        w-7 h-7 md:w-[37px] md:h-[37px]
-                        -rotate-[30deg] ml-1 shrink-0">
-              <svg viewBox="0 0 35.9932 36.7522" fill="none" overflow="visible" xmlns="http://www.w3.org/2000/svg" class="w-4 h-5 md:w-[26px] md:h-[28px]">
-                <g filter="url(#cursor-shadow)">
-                  <path d="M18.2542 18.6922L4.90087 27.9299L18.0824 0.573447L31.0923 27.5734L18.2542 18.6922Z" fill="black"/>
-                  <path d="M18.7046 0.433837L18.6372 0.573485L31.5425 27.3567L30.8081 27.9846L18.2534 19.3L5.18505 28.3411L4.45068 27.7131L17.6323 0.356688L17.8042 0.000242993L18.7046 0.433837Z" stroke="white" stroke-linejoin="bevel"/>
-                </g>
-                <defs>
-                  <filter id="cursor-shadow" x="-1.78814e-07" y="0" width="35.9932" height="36.7522" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="2"/>
-                    <feComposite in2="hardAlpha" operator="out"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                  </filter>
-                </defs>
-              </svg>
-            </div>
-          </div>
+          <p class="font-sans font-extrabold text-accent
+                    text-[40px] sm:text-[52px] lg:text-[64px] xl:text-[72px]
+                    leading-none tracking-tight xl:tracking-[-2.16px]">
+            for people.<span class="caret"></span>
+          </p>
         </div>
 
         <div class="font-sans text-text text-base md:text-[17px] leading-[1.7] max-w-[600px] mx-auto md:mx-0">
@@ -227,54 +203,35 @@
   </section>
 
   <!-- ─── 03 / How I Work ─── -->
-  <section id="how-i-work" class="bg-white border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col
+  <section id="how-i-work" class="bg-white border-b border-border relative overflow-hidden dot-grid">
+    <div class="bg-pulse-local"></div>
+    <div class="bg-cool-local"></div>
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-10 relative z-[1]
                 px-5 sm:px-10 lg:px-16 xl:px-40
                 py-12 md:py-20">
       <p class="font-mono text-text text-base tracking-[0.96px]">03 / How I Work</p>
-      <div class="h-8 md:h-10"></div>
 
-      <hr class="border-0 border-t border-border m-0" />
+      <div class="bg-white border border-border rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-3">
 
-      <div class="hiw-row flex flex-col md:flex-row gap-3 md:gap-10 py-7 md:py-9">
-        <p class="font-mono text-accent text-[13px] tracking-[0.52px] md:w-20 shrink-0">01 /</p>
-        <p class="font-sans font-semibold text-text text-base md:text-[17px] md:w-[260px] shrink-0">Find the real problem first.</p>
-        <p class="font-sans text-text text-sm md:text-[15px] leading-[1.75] flex-1 opacity-80">Not every brief is wrong — but enough are. Before anything takes shape, I make sure the team is solving the same problem: clearly defined, genuinely understood, and agreed on across PM, Engineering, and Design. A well-built wrong solution is harder to kill than a bad one.</p>
+        <div class="flex flex-col gap-4 px-7 py-10 md:py-12 border-b border-border md:border-b-0 md:border-r">
+          <p class="font-mono text-[11px] tracking-[0.08em] opacity-60">01 /</p>
+          <p class="font-sans font-bold text-accent text-[22px] md:text-[28px] leading-[1.15]">Find the real problem first.</p>
+          <p class="font-sans text-text text-[15px] leading-[1.75] opacity-70">Not every brief is wrong — but enough are. Before anything takes shape, I make sure the team is solving the same problem: clearly defined, genuinely understood, and agreed on across PM, Engineering, and Design. A well-built wrong solution is harder to kill than a bad one.</p>
+        </div>
+
+        <div class="flex flex-col gap-4 px-7 py-10 md:py-12 border-b border-border md:border-b-0 md:border-r">
+          <p class="font-mono text-[11px] tracking-[0.08em] opacity-60">02 /</p>
+          <p class="font-sans font-bold text-accent text-[22px] md:text-[28px] leading-[1.15]">Complexity lives in the connections.</p>
+          <p class="font-sans text-text text-[15px] leading-[1.75] opacity-70">The hard problems rarely live in one screen — they live in what depends on what. Before I touch any interface, I map the system: the dependencies, the edge cases, the things that break somewhere else when you fix something here. That's not caution. That's how you know which part of the problem is yours to solve.</p>
+        </div>
+
+        <div class="flex flex-col gap-4 px-7 py-10 md:py-12">
+          <p class="font-mono text-[11px] tracking-[0.08em] opacity-60">03 /</p>
+          <p class="font-sans font-bold text-accent text-[22px] md:text-[28px] leading-[1.15]">Design for the person, not the flow.</p>
+          <p class="font-sans text-text text-[15px] leading-[1.75] opacity-70">A system can be logically correct and still fail — because people don't follow the system's logic, they follow their own. I stay close to real users long enough to understand where the friction actually lives, not where it's supposed to be. The workflow on paper and the workflow in practice are rarely the same.</p>
+        </div>
+
       </div>
-
-      <hr class="border-0 border-t border-border m-0" />
-
-      <div class="hiw-row flex flex-col md:flex-row gap-3 md:gap-10 py-7 md:py-9">
-        <p class="font-mono text-accent text-[13px] tracking-[0.52px] md:w-20 shrink-0">02 /</p>
-        <p class="font-sans font-semibold text-text text-base md:text-[17px] md:w-[260px] shrink-0">Complexity lives in the connections.</p>
-        <p class="font-sans text-text text-sm md:text-[15px] leading-[1.75] flex-1 opacity-80">The hard problems rarely live in one screen — they live in what depends on what. Before I touch any interface, I map the system: the dependencies, the edge cases, the things that break somewhere else when you fix something here. That's not caution. That's how you know which part of the problem is yours to solve.</p>
-      </div>
-
-      <hr class="border-0 border-t border-border m-0" />
-
-      <div class="hiw-row flex flex-col md:flex-row gap-3 md:gap-10 py-7 md:py-9">
-        <p class="font-mono text-accent text-[13px] tracking-[0.52px] md:w-20 shrink-0">03 /</p>
-        <p class="font-sans font-semibold text-text text-base md:text-[17px] md:w-[260px] shrink-0">Design for the person, not the flow.</p>
-        <p class="font-sans text-text text-sm md:text-[15px] leading-[1.75] flex-1 opacity-80">A system can be logically correct and still fail — because people don't follow the system's logic, they follow their own. I stay close to real users long enough to understand where the friction actually lives, not where it's supposed to be. The workflow on paper and the workflow in practice are rarely the same.</p>
-      </div>
-
-      <hr class="border-0 border-t border-border m-0" />
-
-      <div class="hiw-row flex flex-col md:flex-row gap-3 md:gap-10 py-7 md:py-9">
-        <p class="font-mono text-accent text-[13px] tracking-[0.52px] md:w-20 shrink-0">04 /</p>
-        <p class="font-sans font-semibold text-text text-base md:text-[17px] md:w-[260px] shrink-0">Point the right way, even when you can't go all the way.</p>
-        <p class="font-sans text-text text-sm md:text-[15px] leading-[1.75] flex-1 opacity-80">Delivery constraints are real. Not every part of a solution can ship at once, and pretending otherwise leads to decisions that feel complete but aren't. I work with Engineering to understand what's possible and when — and I sequence releases that point in the right direction, even when the full solution has to wait.</p>
-      </div>
-
-      <hr class="border-0 border-t border-border m-0" />
-
-      <div class="hiw-row flex flex-col md:flex-row gap-3 md:gap-10 py-7 md:py-9">
-        <p class="font-mono text-accent text-[13px] tracking-[0.52px] md:w-20 shrink-0">05 /</p>
-        <p class="font-sans font-semibold text-text text-base md:text-[17px] md:w-[260px] shrink-0">Use AI to compress the loop, not the thinking.</p>
-        <p class="font-sans text-text text-sm md:text-[15px] leading-[1.75] flex-1 opacity-80">The thinking doesn't change — the cycle does. I use AI across research, synthesis, and design exploration to move faster from question to validated direction. And I'm building workflows that close the gap between design decisions and frontend delivery — because the handoff is one of the last genuinely slow parts of the process.</p>
-      </div>
-
-      <hr class="border-0 border-t border-border m-0" />
     </div>
   </section>
 
@@ -348,8 +305,10 @@
   </section>
 
   <!-- ─── 05 / Articles ─── -->
-  <section id="articles" class="bg-white border-b border-border">
-    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-10
+  <section id="articles" class="bg-white border-b border-border relative overflow-hidden dot-grid">
+    <div class="bg-pulse-local"></div>
+    <div class="bg-cool-local"></div>
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-10 relative z-[1]
                 px-5 sm:px-10 lg:px-16 xl:px-40
                 py-12 md:py-20">
       <p class="font-mono text-text text-base tracking-[0.96px]">05 / Articles</p>
