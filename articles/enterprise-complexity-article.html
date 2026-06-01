@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why enterprise products fail their users — DL_</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #FFFFFF;
+      --color-text: #111111;
+      --color-accent: #A63D1F;
+      --color-border: rgba(0,0,0,0.1);
+      --color-surface: #F5F5F5;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Dot grid background */
+    .bg-dot-grid {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ambient pulse */
+    .bg-pulse {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 65% 35%, #A63D1F, transparent);
+      opacity: 0.04;
+      animation: gradientPulse 10s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes gradientPulse {
+      0%, 100% { opacity: 0.04; transform: scale(1); }
+      50%       { opacity: 0.07; transform: scale(1.04); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bg-pulse { animation: none; opacity: 0.04; }
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-mark {
+      font-family: 'Fira Code', monospace;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--color-text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--color-accent); }
+
+    /* Article container */
+    .article-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 8rem;
+    }
+
+    /* Article header */
+    .article-meta {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .article-meta .tag {
+      border: 1px solid var(--color-border);
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .article-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-text);
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-subtitle em {
+      font-style: normal;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.3;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--color-accent);
+      padding: 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+      background: var(--color-surface);
+    }
+
+    .pull-quote p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Callout box */
+    .callout {
+      border: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: var(--color-surface);
+    }
+
+    .callout-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .callout p {
+      font-size: 16px;
+      margin-bottom: 0.75rem;
+    }
+
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 3.5rem 0;
+    }
+
+    /* Closing */
+    .article-closing {
+      padding-top: 3rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .article-closing p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    .article-closing .accent { color: var(--color-accent); }
+
+    /* Author */
+    .author-block {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .author-info {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .author-name {
+      font-weight: 600;
+      display: block;
+    }
+
+    .author-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+    }
+
+    footer .footer-right {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    @media (max-width: 640px) {
+      .article-title { font-size: 32px; }
+      .article-subtitle { font-size: 18px; }
+      .nav-links { display: none; }
+      .article-wrapper { padding: 3rem 1.25rem 6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-dot-grid" aria-hidden="true"></div>
+  <div class="bg-pulse" aria-hidden="true"></div>
+
+  <nav>
+    <a href="/" class="nav-mark">DL_</a>
+    <ul class="nav-links">
+      <li><a href="/work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="article-wrapper">
+
+    <div class="article-meta">
+      <span class="tag">[Enterprise UX_]</span>
+      <span class="tag">[Systems Thinking_]</span>
+      <span>May 2026</span>
+    </div>
+
+    <h1 class="article-title">Why enterprise products fail their users</h1>
+    <p class="article-subtitle">The problem isn't complexity — it's complexity that was <em>never designed for.</em></p>
+
+    <!-- 01 -->
+    <div class="section">
+      <span class="section-label">01 /</span>
+      <p>Someone in this story is using a spreadsheet.</p>
+      <p>Not because the system is broken. Not because they don't know how to use it. Because the system was never built for what they actually need to do.</p>
+      <p>This happens more often than most product teams realize. And it costs more than anyone is tracking.</p>
+      <p>But to understand why, it helps to go back further than enterprise software. It helps to go back to the beginning.</p>
+    </div>
+
+    <!-- 02 -->
+    <div class="section">
+      <span class="section-label">02 / This was always considered normal</span>
+      <p>I remember the first time I used a computer.</p>
+      <p>Every simple action required knowing something — a sequence, a shortcut, an invisible rule. If you didn't know it, you found the person in the room who "understood computers." That person was never a designer. The difficulty was just assumed to be part of the deal.</p>
+      <p>That was the implicit contract: technology is complex, and learning to use it is your problem.</p>
+      <p>Decades later, most people still operate under a version of that contract. They tolerate friction they shouldn't have to tolerate. They learn workarounds they shouldn't have to learn. And most of them have no idea that there is an entire profession dedicated to the question of why any of this has to be hard in the first place.</p>
+      <p>That profession is UX design. And the reason it still has to argue for its existence inside product teams is the same reason those early computers came with no explanation: complexity has always been accepted as natural.</p>
+      <p>It isn't.</p>
+    </div>
+
+    <!-- 03 -->
+    <div class="section">
+      <span class="section-label">03 / The request</span>
+      <p>This acceptance of complexity doesn't disappear when software goes enterprise. It gets institutionalized.</p>
+      <p>The request came in as a user story.</p>
+      <p><em style="font-style:italic; color: var(--color-text);">Users need the ability to undo changes mid-flow.</em></p>
+      <p>It looked small. It looked obvious. The assumption was that this was a missing feature — one button, one interaction, problem solved.</p>
+      <p>It wasn't.</p>
+      <p>The undo wasn't the problem. It was a signal. And signals only tell you something is wrong — not what.</p>
+      <p>After interviews with the people actually using the system, a different picture emerged. These users were running financial scenarios — testing combinations of variables, trying to hit a fixed total without exceeding it. The system recorded outcomes. It had no way to support the process of getting there.</p>
+      <p>So they built their own system. On paper. Next to the screen.</p>
+      <p>This wasn't a workaround. It was the only way to do the job.</p>
+    </div>
+
+    <!-- 04 -->
+    <div class="section">
+      <span class="section-label">04 / This is not unusual</span>
+      <p>That image — paper next to screen — is not an edge case. It is one of the most consistent signals in enterprise software.</p>
+
+      <div class="callout">
+        <span class="callout-label">parallel //</span>
+        <p>Nurses in inpatient settings spend an average of <a href="https://www.wolterskluwer.com/en/expert-insights/how-to-improve-the-nurse-experience-with-a-simplified-ehr" target="_blank" rel="noopener">22% of their shift interacting with electronic health record systems</a>. Research published in the <a href="https://psnet.ahrq.gov/issue/nurse-workarounds-electronic-health-record-integrative-review" target="_blank" rel="noopener">Journal of the American Medical Informatics Association</a> identified three categories of workarounds nurses develop around EHR systems: omitting process steps, performing steps out of sequence, and creating unauthorized process steps. Not because nurses are careless. Because the systems were designed around data structure, not clinical workflow.</p>
+      </div>
+
+      <div class="callout">
+        <span class="callout-label">parallel //</span>
+        <p>A <a href="https://link.springer.com/article/10.1186/s12911-021-01548-0" target="_blank" rel="noopener">study conducted in a Dutch hospital</a> identified 11 distinct workarounds in a single internal medicine department — after the EHR system had been in use for two years. The system was functioning. People were working around it anyway.</p>
+      </div>
+
+      <p>In countries where there is no alternative — where a single system serves an entire profession with no competition and no replacement in sight — the problem becomes invisible through familiarity. People adapt. They learn the workarounds. They teach the workarounds to new colleagues. The system's limitations get absorbed into the job description.</p>
+      <p>The pattern is always the same: a system built to handle data ends up being used by people trying to do work. The gap between those two things is where the friction lives — quietly, persistently, for years.</p>
+    </div>
+
+    <!-- 05 -->
+    <div class="section">
+      <span class="section-label">05 / The real cost</span>
+      <p>The most expensive problems in enterprise software are the ones that never get reported.</p>
+      <p>There is no line item for "time spent compensating for the system." It doesn't appear in a sprint retrospective or a quarterly review. It shows up as longer working days, slower cycles, background noise. People adapt, and adaptation becomes invisible.</p>
+      <p>Each workaround carries a cost — in time, in errors, in cognitive load. Multiply that by the number of people doing it. Multiply that by years. The number is significant. It is almost never measured.</p>
+
+      <div class="pull-quote">
+        <p>The most expensive problems in enterprise software are the ones that never get reported. People adapt, and adaptation becomes invisible.</p>
+      </div>
+
+      <p>This is what complexity without design produces. Not a crash. Not an error message. Just people spending part of every working day building bridges between what the system does and what they actually need to do.</p>
+    </div>
+
+    <!-- 06 -->
+    <div class="section">
+      <span class="section-label">06 / Why it happens</span>
+      <p>Enterprise products don't fail their users all at once. They fail them gradually, as the product grows and the distance between what the system does and what people need to do gets wider.</p>
+      <p>It rarely starts as negligence. It starts as speed. A product is built to solve an immediate problem, under delivery pressure, with limited resources. Design — when it exists at all — focuses on the surface: the screens, the flows, the interactions. The deeper question — what is the actual work this person is trying to do, and does the system support that, or just record the outcome of it — often doesn't get asked until the product is already large.</p>
+      <p>By then, the architecture reflects decisions made without that question. Changing it is expensive. So the product grows around the gap instead of closing it.</p>
+      <p>Users adapt. The system ships new features. Nobody connects the two.</p>
+      <p>And nobody questions whether the difficulty was ever necessary in the first place — because difficulty has always felt natural. We learned that from the very beginning.</p>
+    </div>
+
+    <!-- 07 -->
+    <div class="section">
+      <span class="section-label">07 / What this means for the people building these products</span>
+      <p>The spreadsheet on the desk next to the screen is not a user error.</p>
+      <p>It is information. It is telling you that the system supports recording, but not thinking. That it handles inputs, but not decisions. That somewhere between what the product was designed to do and what people actually need to do, there is a gap — and people are filling it themselves.</p>
+      <p>The question worth asking is not "how do we get users to stop using the spreadsheet." It is "what does the spreadsheet know that we don't."</p>
+
+      <div class="pull-quote">
+        <p>Workarounds are not failure. They are the most honest feedback an enterprise product will ever receive — because they happen without anyone asking.</p>
+      </div>
+
+      <p>They happen because the work has to get done and the system isn't enough.</p>
+    </div>
+
+    <!-- 08 -->
+    <div class="article-closing">
+      <span class="section-label">08 /</span>
+      <p>When you don't design for the work, people design around you.</p>
+      <p>They use spreadsheets. They write on paper. They build their own systems in the margins of yours. And they do it so consistently, so quietly, that it stops looking like a problem and starts looking like the job.</p>
+      <p>This has been true since the first computers. It does not have to stay true.</p>
+      <p class="accent">The spreadsheet on the desk next to the screen is not a user error. It is a design brief that nobody wrote.</p>
+    </div>
+
+    <!-- Author -->
+    <div class="author-block">
+      <div class="author-avatar">DL_</div>
+      <div class="author-info">
+        <span class="author-name">Desi Lazova</span>
+        <span class="author-title">Lead Product Designer · I simplify complexity for people.</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>DL_ · 2026</span>
+    <span class="footer-right">I simplify complexity for people.</span>
+  </footer>
+
+</body>
+</html>
