@@ -316,46 +316,55 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <article class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px]">
+        <!-- ACTIVE — links to article page -->
+        <a href="/articles/enterprise-complexity.html"
+           class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px] hover:border-accent transition-colors duration-300 group">
           <div class="flex flex-col gap-6">
-            <p class="font-mono text-accent text-xs tracking-[0.48px]">04 May 2026 · LinkedIn</p>
+            <p class="font-mono text-accent text-xs tracking-[0.48px]">04 May 2026 · Article</p>
             <div class="flex flex-col gap-2">
-              <p class="font-sans font-semibold text-text text-base leading-[1.3]">Why enterprise products fail their users</p>
+              <p class="font-sans font-semibold text-text text-base leading-[1.3] group-hover:text-accent transition-colors duration-300">Why enterprise products fail their users</p>
               <p class="font-sans text-[#555] text-sm leading-[1.7]">The problem isn't complexity — it's complexity that was never designed for.</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-[6px]">
             <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Enterprise UX_]</span>
-            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[IA_]</span>
-          </div>
-        </article>
-
-        <article class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px]">
-          <div class="flex flex-col gap-6">
-            <p class="font-mono text-accent text-xs tracking-[0.48px]">20 Apr 2026 · LinkedIn</p>
-            <div class="flex flex-col gap-2">
-              <p class="font-sans font-semibold text-text text-base leading-[1.3]">Systems thinking for product designers</p>
-              <p class="font-sans text-[#555] text-sm leading-[1.7]">Most design problems aren't about the interface. They're about what the interface connects.</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-[6px]">
             <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Systems Thinking_]</span>
-            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Process_]</span>
           </div>
-        </article>
+        </a>
 
-        <!-- spans 2 cols on tablet so the row fills; 1 col on desktop -->
-        <article class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px] md:col-span-2 lg:col-span-1">
+        <!-- COMING SOON -->
+        <article class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px] opacity-60">
           <div class="flex flex-col gap-6">
-            <p class="font-mono text-accent text-xs tracking-[0.48px]">08 Mar 2026 · LinkedIn</p>
+            <div class="flex items-center justify-between gap-2">
+              <p class="font-mono text-accent text-xs tracking-[0.48px]">Coming soon</p>
+              <span class="font-mono text-[10px] border border-[rgba(0,0,0,0.15)] text-[#888] px-3 py-[3px] rounded-full">[In progress_]</span>
+            </div>
             <div class="flex flex-col gap-2">
-              <p class="font-sans font-semibold text-text text-base leading-[1.3]">Design in the age of AI products</p>
-              <p class="font-sans text-[#555] text-sm leading-[1.7]">When the system can act, designing for outcomes replaces designing for flows.</p>
+              <p class="font-sans font-semibold text-text text-base leading-[1.3]">AI can critique. It can't yet refine.</p>
+              <p class="font-sans text-[#555] text-sm leading-[1.7]">The structural paradox of AI design tools that accurately identify problems but fail to hold that understanding during fixes.</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-[6px]">
             <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[AI UX_]</span>
-            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Product Design_]</span>
+            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Design Tools_]</span>
+          </div>
+        </article>
+
+        <!-- COMING SOON — spans 2 cols on tablet -->
+        <article class="article-card bg-white border border-border flex flex-col justify-between p-8 md:p-10 rounded-3xl min-h-[280px] md:min-h-[320px] md:col-span-2 lg:col-span-1 opacity-60">
+          <div class="flex flex-col gap-6">
+            <div class="flex items-center justify-between gap-2">
+              <p class="font-mono text-accent text-xs tracking-[0.48px]">Coming soon</p>
+              <span class="font-mono text-[10px] border border-[rgba(0,0,0,0.15)] text-[#888] px-3 py-[3px] rounded-full">[In progress_]</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <p class="font-sans font-semibold text-text text-base leading-[1.3]">What "building from zero" actually means</p>
+              <p class="font-sans text-[#555] text-sm leading-[1.7]">No playbook, no precedent, no prior tooling. What founding designer experience actually looks like under delivery pressure.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-[6px]">
+            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Design Leadership_]</span>
+            <span class="border border-[rgba(0,0,0,0.2)] font-mono text-text text-[11px] px-3 py-[5px] rounded-full">[Process_]</span>
           </div>
         </article>
 
