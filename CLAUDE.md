@@ -290,3 +290,10 @@ Sections in order:
 - [ ] Tags use `[bracket_]` notation
 - [ ] Sections use `01 /` slash notation
 - [ ] `prefers-reduced-motion` respected on all animations
+
+## Skills
+When working on case study content (portfolio pages), always follow:
+- skills/dl-voice.md — tone, sentence-level voice rules
+- skills/dl-case-study.md — structure, decision framing
+- skills/dl-brand.md — visual tokens, don't violate brand system
+- skills/dl-platform-constraints.md — layout/breakpoint rules, never break these when editing text
