@@ -207,7 +207,7 @@
       </h2>
 
       <div class="flex flex-col md:flex-row gap-10 md:gap-16 pt-2">
-        <!-- Left: body -->
+        <!-- Left: body + working method callout -->
         <div class="flex flex-col gap-6 flex-1 min-w-0">
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
             I joined Omniva at the very beginning - before there was a product.
@@ -216,34 +216,43 @@
             Early on: isolated features, shifting priorities, a team searching for market fit. As the product scaled, I owned complex workflow design across the console - research, IA, navigation, onboarding, homepage, and AI-assisted guidance.
           </p>
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-            Beyond the screens: I introduced the discovery practice - user interviews, analytics tracking, weekly synthesis - and used it to shift design decisions from opinion to evidence. That structure didn't exist before. Neither did the product trio with PM and Engineering Lead.
+          Beyond the screens, I built the practices that let the team make evidence-based decisions instead of opinion-based ones.
           </p>
-        </div>
+          <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
+          PM and I had a shared vision for where the product needed to go, but a lot of it depended on APIs that didn't exist yet. I proposed the Now / Next / Future structure to turn that vision into something buildable: align on what was possible now, learn from it, and let evidence shape what came next.
+          </p>
 
-        <!-- Right: callout + timeline -->
-        <div class="flex flex-col gap-6 md:w-[420px] lg:w-[460px] shrink-0 md:pt-4">
           <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
             <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Working method</p>
             <p class="font-sans text-text text-[15px] leading-[1.65]">
-              Problem framing before wireframes. Engineering feasibility before client validation. Research running in parallel with delivery - not after it.
+            Problem framing before wireframes. Engineering feasibility before client validation. Research running in parallel with delivery, not after it.
             </p>
             <p class="font-sans text-text text-[15px] leading-[1.65]">
-              Every decision shared with PM and Engineering before it became a proposal. That's what kept the work moving without losing direction.
+            Neither the discovery practice nor the product trio with PM and Engineering Lead existed before me. I built both from zero, and shared every decision with PM and Engineering before it became a proposal. That's what kept the work moving without losing direction. Both structures were still running after I left.
             </p>
           </div>
+        </div>
 
-          <div class="border border-border rounded-2xl overflow-hidden">
-            <div class="flex flex-col gap-[5px] px-5 py-[16px] border-b border-border">
-              <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Now /</p>
-              <p class="font-sans text-text text-[13px] leading-[1.5]">Small improvements. Minimum engineering effort. Ship fast - generate signal.</p>
+        <!-- Right: timeline -->
+        <div class="flex flex-col md:w-[420px] lg:w-[460px] shrink-0 md:pt-4">
+          <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-1">
+              <p class="font-mono font-medium text-[#555] text-[11px]">Why this structure</p>
+              <p class="font-mono text-[#555] text-[11px]">Small steps first meant the product could absorb complexity as it grew, without needing to be re-architected later, including the layout and navigation restructure that came first.</p>
             </div>
-            <div class="flex flex-col gap-[5px] px-5 py-[16px] border-b border-border">
-              <p class="font-mono text-[#888] text-[10px] tracking-[0.8px] uppercase">Next /</p>
-              <p class="font-sans text-text text-[13px] leading-[1.5]">Validated priorities moving in the right direction.</p>
-            </div>
-            <div class="flex flex-col gap-[5px] px-5 py-[16px]">
-              <p class="font-mono text-[#aaa] text-[10px] tracking-[0.8px] uppercase">Future /</p>
-              <p class="font-sans text-text text-[13px] leading-[1.5]">Early concept validation. Proof of concept for what the system could become.</p>
+            <div class="border border-border rounded-2xl overflow-hidden">
+              <div class="flex flex-col gap-[5px] px-5 py-[16px] border-b border-border">
+                <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Now /</p>
+                <p class="font-sans text-text text-[13px] leading-[1.5]">Small improvements. Minimum engineering effort. Ship fast - generate signal.</p>
+              </div>
+              <div class="flex flex-col gap-[5px] px-5 py-[16px] border-b border-border">
+                <p class="font-mono text-[#888] text-[10px] tracking-[0.8px] uppercase">Next /</p>
+                <p class="font-sans text-text text-[13px] leading-[1.5]">Validated priorities moving in the right direction.</p>
+              </div>
+              <div class="flex flex-col gap-[5px] px-5 py-[16px]">
+                <p class="font-mono text-[#aaa] text-[10px] tracking-[0.8px] uppercase">Future /</p>
+                <p class="font-sans text-text text-[13px] leading-[1.5]">Early concept validation. Proof of concept for what the system could become.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -265,26 +274,28 @@
       <h2 class="font-sans font-bold text-text
                  text-[24px] md:text-[32px] lg:text-[36px]
                  leading-[1.15] tracking-[-0.72px] max-w-[680px]">
-        Before redesigning anything, I needed to make the problem legible - to myself, and to the team.
+        I decided to build a discovery practice from scratch - the problem needed to be legible before anything else.
       </h2>
 
-      <div class="flex flex-col gap-4 max-w-[680px]">
-        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          There was no existing research practice. No analytics loop. No interviews. I built one.
-        </p>
-        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          I created a tracking structure in Confluence and pulled weekly data from Datadog - adoption, engagement, retention, time-on-task, errors, and drop-off points. Session recordings gave texture to the numbers: where engineers hesitated, where they navigated away, where they repeated the same action without succeeding.
-        </p>
-        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          Over several weeks a pattern became clear: new users rarely returned after onboarding. Existing users struggled to find what they needed. The signals were consistent. The reasons weren't obvious - and that gap justified the first structured user interviews.
-        </p>
-      </div>
+      <div class="flex flex-col md:flex-row gap-10 md:gap-16">
+        <div class="flex flex-col gap-4 max-w-[680px] shrink-0">
+          <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
+            There was no existing research practice. No analytics loop. No interviews. I built one.
+          </p>
+          <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
+            I created a tracking structure in Confluence and pulled weekly data from Datadog - adoption, engagement, retention, time-on-task, errors, and drop-off points. Session recordings gave texture to the numbers: where engineers hesitated, where they navigated away, where they repeated the same action without succeeding.
+          </p>
+          <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
+          I tracked and documented these numbers continuously for at least two months before anything else started. A pattern became clear: new users rarely returned after onboarding, and existing users struggled to find what they needed. The signals were consistent. The reasons weren't obvious - and that gap justified the first structured user interviews. Nobody had considered redesigning the console yet. That consistency, not a single report, is what eventually brought the product team to the table, starting with the Head of Product and then the customer console PM.
+          </p>
+        </div>
 
-      <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl max-w-[860px]">
-        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Why this mattered beyond insights</p>
-        <p class="font-sans text-text text-[15px] leading-[1.65]">
-          The research gave PM and Engineering a shared reference point. Design decisions stopped being about opinion and started being about evidence. That shift - from taste to data - changed how the team made product decisions.
-        </p>
+        <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl flex-1 min-w-0 self-start">
+          <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Why this mattered beyond insights</p>
+          <p class="font-sans text-text text-[15px] leading-[1.65]">
+            The research gave PM and Engineering a shared reference point. Design decisions stopped being about opinion and started being about evidence. That shift - from taste to data - changed how the team made product decisions.
+          </p>
+        </div>
       </div>
 
     </div>
@@ -308,18 +319,18 @@
 
       <div class="flex flex-col gap-4 max-w-[680px]">
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          Before touching any screen, I mapped the full navigation. What I found was a product built feature-by-feature - sections grouped by engineering logic, not by how engineers actually worked. Legal and resource links had ended up in the footer. No comparable infrastructure platform had this pattern. Competitor analysis confirmed it. We moved them to the header under Docs &amp; Legal.
+        With the research pointing to navigation as the first blocker, I started with the foundation. The product was becoming a modular platform, meant to bring together different services and capabilities under one system, and the inherited navigation no longer matched that shape: sections were grouped by engineering logic, not by how engineers actually thought about their own work. I decided to rebuild the navigation and remove the footer entirely before touching any screen, regrouping sections around that mental model instead, so related capabilities sat together the way users expected to find them.
         </p>
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          The restructure addressed four things in parallel: information grouping, header cleanup, footer removal, and UX copy.
+          The restructure touched four things at once: information grouping, header cleanup, footer removal, and UX copy.
         </p>
       </div>
 
       <!-- Why the footer mattered callout -->
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl max-w-[860px]">
-        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Why the footer mattered</p>
+        <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Why the footer had to go</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Legal and resource links - Service Terms, Privacy Policy, SLA, Developer Portal - had ended up in the footer. Right content, wrong location. No comparable infrastructure platform had this pattern. Competitor analysis confirmed it. We moved them to the header under Docs &amp; Legal, where they're accessible without disrupting the operational workflow.
+        Service Terms, Privacy Policy, SLA, and Developer Portal links were in the wrong location. Competitor research confirmed footers are a marketing convention, not one operational consoles carry. I moved that content to the header under Docs & Legal.
         </p>
       </div>
 
@@ -343,7 +354,11 @@
       <h3 class="font-sans font-bold text-text text-[17px] leading-[1.6]">Workflows out of dialogs - into context.</h3>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
-        Creation flows were implemented as heavy modal dialogs - all fields presented at once, no breadcrumb, no spatial context. We moved to two complementary patterns: full-page layout with back navigation and breadcrumb for creation flows, and progressive disclosure for complex configurations - breaking multi-step setup into sequenced steps, guiding engineers through dependencies rather than presenting everything simultaneously.
+      The same modular shift meant workflows needed to change too. I replaced the heavy modal dialogs with two complementary patterns: full-page layout with breadcrumb navigation for creation flows, and progressive disclosure for complex configurations. The modal pattern couldn't scale with the product: every new feature meant cramming more fields into the same dialog, with no breadcrumb and no spatial context for engineers mid-setup.
+      </p>
+
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+      The trade-off was investing upfront in defining two durable patterns now, rather than continuing to extend the modal feature by feature. I chose foundation over short-term speed, because retrofitting navigation patterns later, once dozens of flows depended on them, would have cost far more than getting the shape right early
       </p>
 
       <!-- Layout before / after -->
@@ -388,6 +403,9 @@
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
           The surface had no concept of where you were in the journey. It couldn't tell if you'd just added billing or were managing twelve clusters in production. That became the question every iteration tried to answer differently.
         </p>
+        <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
+          Rather than settle on one answer upfront, I tested three different approaches in sequence: each iteration would tell us something the last one couldn't.
+        </p>
       </div>
 
       <!-- 3-col iteration cards -->
@@ -426,7 +444,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">What the data showed</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Session depth improved for new engineers. The recordings approved our assumptions - engineers with existing infrastructure were ignoring the homepage entirely. They'd land, see a CTA they didn't need, and navigate away. One answer, two completely different needs.
+          Session depth improved for new engineers. The recordings confirmed the split we suspected - engineers with existing infrastructure were ignoring the homepage entirely. They'd land, see a CTA they didn't need, and navigate away. One answer, two completely different needs.
         </p>
       </div>
 
@@ -468,12 +486,12 @@
           <div class="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,2fr)] border-b border-border">
             <div class="font-sans font-semibold text-text text-[13px] px-5 py-[15px] border-r border-border">Billing snapshot</div>
             <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px] border-r border-border">Backend not available at launch.</div>
-            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">Designed the component. Added it when backend was ready.</div>
+            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">I designed the component, then added it once the backend was ready.</div>
           </div>
           <div class="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,2fr)]">
             <div class="font-sans font-semibold text-text text-[13px] px-5 py-[15px] border-r border-border">Cluster health status</div>
             <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px] border-r border-border">Required defining "healthy" with Engineering first - no agreed API endpoint.</div>
-            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">Worked with Engineering to define health from the engineer's perspective. Cluster overview was the interim solution.</div>
+            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">I worked with Engineering to define health from the engineer's perspective. Cluster overview was the interim solution.</div>
           </div>
         </div>
       </div>
@@ -482,7 +500,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">The right solution, in the right order.</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Every deprioritisation was a conscious choice - sequenced for when the system could support it reliably. That's what made the signal-driven hub possible.
+          I made every deprioritisation a conscious choice - sequenced for when the system could reliably support it. That discipline is what made the signal-driven hub possible.
         </p>
       </div>
 
@@ -531,7 +549,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">One more structural change - Alerts</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Testing the new homepage revealed that Alerts - still nested under Monitoring - weren't being found intuitively. Engineers looked for them directly, as a standalone action item. We promoted Alerts to top-level navigation. The usability data made the case clearly.
+        Alerts moved to top-level navigation, because usability testing showed engineers looking for them directly, as a standalone action item, not nested under Monitoring, where they'd originally been placed. The trade-off was giving alerts permanent nav real estate over keeping the top level minimal, because a missed critical alert cost far more than one extra nav item.
         </p>
       </div>
 
@@ -563,7 +581,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">PM · Competitor analysis + CTA positioning</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">Where should the primary action live?</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            PM brought competitor analysis showing most platforms placing the primary action in the top-right corner. I defended top-left positioning - the strongest visual anchor based on F/Z scanning patterns, supported by multiple UX studies I shared. We reviewed the evidence together and aligned on top-left. The decision was grounded in how engineers actually scan a dense operational interface, not convention.
+            I decided on top-left placement for the primary action, because F/Z scanning research, backed by multiple UX studies I shared, showed it as the strongest visual anchor for a dense operational interface. There was also a scalability reason: these actions were going to expand over time, and right-side placement had no room to grow naturally without crowding other elements. PM flagged that most competitor platforms placed the primary action top-right, and the trade-off was choosing evidence on how engineers actually scan the screen and room to scale over matching industry convention, because familiarity mattered less than getting the anchor point right for a technical, high-density UI that would only grow more complex.
           </p>
         </div>
 
@@ -571,7 +589,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Engineering · Sequencing the build</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">The right solution, built in the right order.</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            The signal-driven hub required significant backend work. We sequenced deliberately - foundational iterations first, each one adding a layer the next could build on. Ongoing discovery ran in parallel throughout, validating that we were moving in the right direction. By the time the hub was ready to build, the foundation was in place and the direction was confirmed.
+            I chose to ship the foundational iterations first, instead of waiting to build the full signal-driven hub. Engineering flagged the hub's complexity and the build risk of tackling it before we had real usage signal, and the trade-off was choosing speed-to-data over feature completeness, because shipping the harder version first, without evidence, risked solving the wrong problem. Discovery kept running in parallel throughout, so by the time the hub was ready to build, the foundation and the direction were both already confirmed.
           </p>
         </div>
 
@@ -579,7 +597,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Engineering · Defining "healthy"</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">What does system health mean to an engineer?</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            "Healthy" couldn't be implemented until we agreed on a definition. I worked with Engineering to map out what engineers actually needed to know - threshold values, warning vs. critical states, and which signals were reliable enough to surface. The collaborative definition process shaped the final signal hierarchy on the hub.
+            There was no agreed API endpoint for system health yet, so I shipped Cluster Overview as an interim signal instead of waiting for a formal health indicator. Engineering flagged that "healthy" couldn't be implemented until we agreed on threshold values and warning-vs-critical states, and the trade-off was choosing a working interim solution over delaying the hub until that definition was finalized, because engineers needed a signal now, even an imperfect one. The definition work we did together went on to shape the final signal hierarchy on the hub.
           </p>
         </div>
       </div>
@@ -604,7 +622,7 @@
       </h2>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
-        Introduced late - when the operational hub was live but engineers were still escalating to support to understand what their alerts meant. The interaction model had one principle: surface reasoning, preserve control.
+        I introduced the AI agent late, after the operational hub was live, when engineers were still escalating to support to understand what their alerts meant. The interaction model had one principle: surface reasoning, preserve control. My instinct from a pure UX standpoint was to let the agent act directly, but Engineering couldn't yet guarantee reliable outcomes at that stage, and a wrong autonomous action would have cost far more than a slower, human-confirmed one. The trade-off was choosing a slower, transparent interaction over full automation, because the cost of one bad autonomous call outweighed the friction of asking engineers to confirm.
       </p>
 
       <!-- 3-col: Observation / Context / Consider -->
@@ -684,7 +702,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">2x<span class="text-accent">+</span></p>
           <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Session depth grew from seconds to minutes. Return visit rate increased. Engineers started sessions on the homepage.</p>
-          <p class="font-mono text-[#666] text-[10px] pt-1">Datadog · vs. 1A baseline · directional</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Datadog · vs. 1A baseline · directional, measured over ~2 months post-launch</p>
         </div>
       </div>
 
@@ -706,7 +724,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">−<span class="text-accent">35%</span></p>
           <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Ops workflow task completion time reduced. Qualitative shift in engineer confidence visible across interview cohorts.</p>
-          <p class="font-mono text-[#666] text-[10px] pt-1">Usability testing + telemetry</p>
+          <p class="font-mono text-[#666] text-[10px] pt-1">Usability testing + telemetry, measured over ~2 months post-launch</p>
         </div>
       </div>
 
@@ -717,6 +735,10 @@
           Before the redesign, engineers struggled to articulate what they would do next in the product. After the signal-driven hub shipped, they could describe their next three steps without prompting. That shift - from confusion to confidence - was the outcome that mattered most.
         </p>
       </div>
+
+      <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
+        These outcomes traced back to specific decisions made along the way. Rebuilding the navigation and removing the footer gave the console a structure engineers could navigate the way they actually thought about their work. Sequencing the foundational iterations before the signal-driven hub meant every later decision was grounded in real usage data, not assumptions. Shipping the AI agent with transparent reasoning instead of full automation kept trust intact while engineers learned to rely on it. Together, these choices are what took session depth from seconds to minutes, and cut ops workflow task time by 35%.
+      </p>
 
     </div>
   </section>
