@@ -102,7 +102,7 @@ img {
   position: relative;
   z-index: 1;
 }
-.article-card:hover {
+.article-card:not(.article-card-disabled):hover {
   transform: translateY(-4px) scale(1.015);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
 }
@@ -191,7 +191,7 @@ img {
   transition: transform 0.35s var(--ease-standard);
   z-index: 2;
 }
-.article-card:hover::after {
+.article-card:not(.article-card-disabled):hover::after {
   transform: scaleX(1);
 }
 
