@@ -61,6 +61,21 @@ img {
   position: relative;
   transition: transform 0.35s var(--ease-standard), box-shadow 0.35s var(--ease-standard);
 }
+/* Ambient terracotta pulse — matches .article-card treatment */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 70% 60% at 70% 0%, rgba(166, 61, 31, 0.06), transparent);
+  animation: gradientPulse 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.card > * {
+  position: relative;
+  z-index: 1;
+}
 .card:hover {
   transform: translateY(-4px) scale(1.015);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
@@ -229,6 +244,130 @@ img {
   animation: caret-blink 1.2s step-end infinite;
 }
 
+/* ── Try it_ — interactive sprint timeline (How I Work) ── */
+.sprint-tab {
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+  transition: border-color 0.25s var(--ease-standard), color 0.25s var(--ease-standard), background 0.25s var(--ease-standard);
+}
+.sprint-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.sprint-tab.active {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: #fff;
+}
+.sprint-tab.active:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.sprint-total,
+.sprint-ruler .tick,
+.sprint-badge,
+.sprint-dl,
+.sprint-detail-dur {
+  font-family: var(--font-mono);
+}
+
+.sprint-total {
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+.sprint-ruler {
+  position: relative;
+  height: 18px;
+}
+.sprint-ruler .tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.sprint-track-outer {
+  position: relative;
+}
+.sprint-track {
+  display: flex;
+  height: 76px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.sprint-clip {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 14px;
+  cursor: pointer;
+  border: none;
+  border-right: 3px solid #fff;
+  text-align: left;
+  transition: box-shadow 0.25s var(--ease-standard);
+}
+.sprint-clip:last-child {
+  border-right: none;
+}
+/* Match the track's rounded mask on the edge segments so the active ring
+   isn't hard-clipped into a square corner by .sprint-track's overflow:hidden */
+.sprint-clip:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.sprint-clip:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.sprint-clip.active {
+  box-shadow: inset 0 0 0 2px var(--color-accent);
+  z-index: 1;
+}
+.sprint-badge {
+  position: absolute;
+  top: 86px;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 5px 12px;
+  color: rgba(17, 17, 17, 0.6);
+  white-space: nowrap;
+}
+.sprint-sw {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: inline-block;
+}
+.sprint-gran-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-text);
+  flex-shrink: 0;
+  display: inline-block;
+}
+.sprint-skip-box {
+  background: var(--color-surface);
+  border-radius: 14px;
+}
+@media (max-width: 700px) {
+  .sprint-detail-body {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -239,7 +378,7 @@ img {
   .bg-pulse-local { animation: none; opacity: 0.08; }
   .bg-cool-local  { animation: none; opacity: 0.05; }
   .caret { animation: none; opacity: 1; }
-  .article-card::before { animation: none; opacity: 0.04; }
+  .card::before, .article-card::before { animation: none; opacity: 0.04; }
   .card, .article-card {
     transition: box-shadow 0.35s var(--ease-standard);
   }
