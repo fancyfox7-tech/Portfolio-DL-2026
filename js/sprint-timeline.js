@@ -265,10 +265,10 @@
               <p class="font-sans text-text text-[13px] leading-[1.5]">${p.skip}</p>
             </div>
           </div>
-          <div class="flex flex-col gap-[10px] pt-[14px] border-t border-border">
-            <div><span class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">Collaboration </span><span class="font-sans text-text text-[13px]">${p.collab}</span></div>
-            <div><span class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">AI acceleration </span><span class="font-sans text-text text-[13px]">${p.ai}</span></div>
-            <div><span class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">Human checkpoint </span><span class="font-sans text-text text-[13px]">${p.human}</span></div>
+          <div class="flex flex-col gap-3 pt-[14px] border-t border-border">
+            <div class="flex flex-col gap-1"><p class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">Collaboration</p><p class="font-sans text-text text-[13px]">${p.collab}</p></div>
+            <div class="flex flex-col gap-1"><p class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">AI acceleration</p><p class="font-sans text-text text-[13px]">${p.ai}</p></div>
+            <div class="flex flex-col gap-1"><p class="font-mono text-[10px] tracking-[0.6px]" style="color:rgba(17,17,17,.55)">Human checkpoint</p><p class="font-sans text-text text-[13px]">${p.human}</p></div>
           </div>`;
         wrap.appendChild(panel);
       }
