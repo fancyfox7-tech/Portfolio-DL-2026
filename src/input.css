@@ -244,22 +244,29 @@ img {
   animation: caret-blink 1.2s step-end infinite;
 }
 
-/* ── Try it_ — interactive sprint timeline (How I Work) ── */
+/* ── Every project gets the approach it needs — project-approach timeline ──
+   Desktop: a gantt chart, one lane per phase, overlapping phases stacked
+   diagonally. Mobile (<680px of the component's own container width, via
+   ResizeObserver — not window width): a vertical accordion. See
+   js/sprint-timeline.js for the layout math. */
+/* Matches the hero's primary/secondary button pair exactly:
+   inactive = secondary (border-text, no fill), active = primary (bg-text fill). */
 .sprint-tab {
   cursor: pointer;
-  padding: 11px 20px;
   border-radius: 999px;
-  border: 1px solid var(--color-text);
-  background: transparent;
-  color: var(--color-text);
-  transition: border-color 0.25s var(--ease-standard), color 0.25s var(--ease-standard), background 0.25s var(--ease-standard);
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
 }
-.sprint-tab:hover {
+.sprint-tab:not(.active) {
+  background: transparent;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+}
+.sprint-tab:not(.active):hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
 .sprint-tab.active {
-  border-color: var(--color-text);
+  border: 1px solid var(--color-text);
   background: var(--color-text);
   color: #fff;
 }
@@ -267,105 +274,73 @@ img {
   background: var(--color-accent);
   border-color: var(--color-accent);
 }
-
-.sprint-total,
-.sprint-ruler .tick,
-.sprint-badge,
-.sprint-dl,
-.sprint-detail-dur {
-  font-family: var(--font-mono);
+.sprint-tab:focus-visible,
+.sprint-bar:focus-visible,
+.sprint-mobile-header:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .sprint-total {
   background: #fff;
   padding: 6px 14px;
   border-radius: 999px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   white-space: nowrap;
 }
-.sprint-ruler {
-  position: relative;
-  height: 18px;
-}
-.sprint-ruler .tick {
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-.sprint-track-outer {
-  position: relative;
-}
-.sprint-track {
-  display: flex;
-  height: 76px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.sprint-clip {
-  position: relative;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 14px;
+
+/* Desktop gantt phase bar — accent tint/border set inline per category */
+.sprint-bar {
   cursor: pointer;
-  border: none;
-  border-right: 3px solid #fff;
-  text-align: left;
-  transition: box-shadow 0.25s var(--ease-standard);
+  transition: box-shadow 150ms ease, background 150ms ease;
 }
-.sprint-clip:last-child {
-  border-right: none;
+.sprint-bar:not(.active):hover {
+  box-shadow: 0 0 0 1.5px var(--hover-ring);
 }
-/* Match the track's rounded mask on the edge segments so the active ring
-   isn't hard-clipped into a square corner by .sprint-track's overflow:hidden */
-.sprint-clip:first-child {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+
+/* Mobile accordion header — accent tint set inline per category */
+.sprint-mobile-header {
+  cursor: pointer;
+  transition: border-radius 150ms ease;
 }
-.sprint-clip:last-child {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-.sprint-clip.active {
-  box-shadow: inset 0 0 0 2px var(--color-accent);
-  z-index: 1;
-}
-.sprint-badge {
-  position: absolute;
-  top: 86px;
-  transform: translateX(-50%);
-  background: #fff;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  padding: 5px 12px;
-  color: rgba(17, 17, 17, 0.6);
-  white-space: nowrap;
-}
-.sprint-sw {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  display: inline-block;
-}
-.sprint-gran-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-text);
-  flex-shrink: 0;
-  display: inline-block;
-}
-.sprint-skip-box {
-  background: var(--color-surface);
-  border-radius: 14px;
-}
+
 @media (max-width: 700px) {
   .sprint-detail-body {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Mobile nav hamburger — three bars that morph into an X ── */
+.hamburger {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 12px;
+}
+.hamburger::before,
+.hamburger::after,
+.hamburger span {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-text);
+  transition: transform 0.3s var(--ease-standard), opacity 0.3s var(--ease-standard), top 0.3s var(--ease-standard);
+}
+.hamburger::before { top: 0; }
+.hamburger span     { top: 5.25px; }
+.hamburger::after   { top: 10.5px; }
+#mobile-menu-btn[aria-expanded="true"] .hamburger::before {
+  top: 5.25px;
+  transform: rotate(45deg);
+}
+#mobile-menu-btn[aria-expanded="true"] .hamburger span {
+  opacity: 0;
+}
+#mobile-menu-btn[aria-expanded="true"] .hamburger::after {
+  top: 5.25px;
+  transform: rotate(-45deg);
 }
 
 /* ── Reduced motion ── */
@@ -386,4 +361,5 @@ img {
     transform: none;
   }
   .hiw-row::before { transition: none; }
+  .hamburger::before, .hamburger::after, .hamburger span { transition: none; }
 }
