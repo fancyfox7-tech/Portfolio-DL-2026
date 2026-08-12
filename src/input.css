@@ -254,7 +254,22 @@ img {
 .sprint-tab {
   cursor: pointer;
   border-radius: 999px;
+  scroll-snap-align: start;
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+/* #sprint-tabs — horizontal scroll on mobile instead of wrapping (scrollbar
+   hidden visually, still scrollable; desktop wraps as before via md:flex-wrap) */
+#sprint-tabs {
+  scrollbar-width: none;
+}
+#sprint-tabs::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 767px) {
+  #sprint-tabs {
+    scroll-snap-type: x mandatory;
+  }
 }
 .sprint-tab:not(.active) {
   background: transparent;
