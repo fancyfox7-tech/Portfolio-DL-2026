@@ -250,7 +250,7 @@
         panel.className = 'bg-white border border-border';
         panel.style.cssText = 'border-top:none;border-radius:0 0 14px 14px;padding:20px 18px 24px;margin-bottom:12px;';
         panel.innerHTML = `
-          <p class="font-sans font-semibold text-text text-[14.5px] leading-[1.5] mb-4">${p.purpose}</p>
+          <p class="font-sans text-text text-[14.5px] leading-[1.5] mb-4">${p.purpose}</p>
           <div class="font-mono text-[10.5px] tracking-[0.7px] mb-2" style="color:rgba(17,17,17,.55)">Key activities</div>
           ${p.activities.map(a => `<div class="flex items-start gap-2 font-sans text-text text-[13.5px] mb-2"><span class="w-[5px] h-[5px] rounded-full bg-text mt-[7px] flex-shrink-0"></span>${a}</div>`).join('')}
           <div class="font-mono text-[10.5px] tracking-[0.7px] mt-[14px] mb-[6px]" style="color:rgba(17,17,17,.55)">Expected outcome</div>
@@ -285,10 +285,10 @@
     detailWrapEl.innerHTML = `
       <div id="sprint-detail-panel" aria-live="polite" class="bg-white border border-border rounded-[20px] p-8">
         <div class="flex items-baseline gap-4 flex-wrap pb-5 mb-6 border-b border-border">
-          <div class="font-sans font-extrabold text-text text-2xl">${dp.label}</div>
+          <div class="font-sans font-semibold text-text text-xl">${dp.label}</div>
           <div class="font-mono text-text text-[13px] ml-auto whitespace-nowrap">${dur}</div>
         </div>
-        <p class="font-sans font-semibold text-text text-base leading-[1.5] mb-7 max-w-[760px]">${dp.purpose}</p>
+        <p class="font-sans text-text text-[15px] leading-[1.65] mb-7 max-w-[760px]">${dp.purpose}</p>
         <div class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-10 mb-7">
           <div>
             <div class="font-mono text-[11px] tracking-[0.8px] mb-[14px]" style="color:rgba(17,17,17,.55)">Key activities</div>
