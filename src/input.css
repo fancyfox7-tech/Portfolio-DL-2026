@@ -358,6 +358,75 @@ img {
   transform: rotate(-45deg);
 }
 
+/* ── How I Work — connected nodes ── */
+.hiw-node {
+  position: relative;
+  isolation: isolate;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: transform 300ms var(--ease-standard), background-color 300ms var(--ease-standard), border-color 300ms var(--ease-standard), color 300ms var(--ease-standard);
+}
+.hiw-node-active {
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: #fff;
+}
+.hiw-node-inactive {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--color-text);
+}
+.hiw-node-inactive:hover {
+  border-color: var(--color-accent);
+  transform: scale(1.08);
+}
+.hiw-node:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+.hiw-node-label {
+  transition: color 300ms var(--ease-standard);
+}
+.hiw-card-body-fade {
+  transition: opacity 200ms var(--ease-standard);
+}
+.hiw-card-frame {
+  overflow: hidden;
+  transition: height 300ms var(--ease-standard);
+}
+.hiw-card-pointer {
+  transition: left 300ms var(--ease-standard);
+}
+
+/* Pulsing glow behind the active node */
+@keyframes nodeGlowPulse {
+  0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
+  50%       { opacity: 0.3;  transform: translate(-50%, -50%) scale(1.15); }
+}
+
+.node-glow-active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #A63D1F, transparent 70%);
+  animation: nodeGlowPulse 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node-glow-active { animation: none; opacity: 0.2; }
+}
+
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -377,4 +446,7 @@ img {
   }
   .hiw-row::before { transition: none; }
   .hamburger::before, .hamburger::after, .hamburger span { transition: none; }
+  .hiw-node { transition: none; }
+  .hiw-node-inactive:hover { transform: none; }
+  .hiw-node-label, .hiw-card-body-fade, .hiw-card-frame, .hiw-card-pointer { transition: none; }
 }
