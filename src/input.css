@@ -217,7 +217,7 @@ img {
   background: radial-gradient(ellipse 60% 65% at 18% 78%, #2D4A7A, transparent);
   animation: heroCoolPulse 8s ease-in-out infinite -4s;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 .bg-pulse-local {
   position: absolute;
@@ -225,7 +225,7 @@ img {
   background: radial-gradient(ellipse 65% 70% at 65% 35%, #A63D1F, transparent);
   animation: heroWarmPulse 8s ease-in-out infinite;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* ── Hero caret ── */

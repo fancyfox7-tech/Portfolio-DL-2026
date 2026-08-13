@@ -1,4 +1,4 @@
-// ─── Every project gets the approach it needs — interactive project-approach timeline ───
+// ─── Every project gets the approach it needs - interactive project-approach timeline ───
 // Desktop: a gantt chart (one lane per phase, overlaps stacked diagonally).
 // Mobile: a vertical accordion. The switch is driven by a ResizeObserver on
 // the component's own container (#sprint-app), not window width, so this
