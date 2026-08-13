@@ -33,7 +33,7 @@
   const PROJECT_TYPES = {
     '0→1 Product': {
       note: "Framed as a focused product scope: a validated concept and a first releasable slice, not a finished platform.",
-      defaultIdx: 1,
+      defaultIdx: 0,
       phases: [
         { label: 'Discovery & Framing', weeks: 1.25, overlap: 0, cat: 'research', purpose: 'Get to the real problem and its constraints before any concept takes shape.', activities: ['Stakeholder interviews', 'Workflow & usage audit', 'Competitive scan', 'Problem framing'], outcome: 'A problem framing the team agrees on.', use: 'New problem space, with no existing validated framing.', skip: 'The problem is narrow and already validated by prior work.', collab: 'Product on scope, domain experts and Engineering on technical constraints.', ai: 'Synthesizing interview notes and support tickets into patterns worth investigating.', human: 'Deciding which problem is actually worth solving.' },
         { label: 'Concept & Core Flows', weeks: 1.25, overlap: 0.5, cat: 'design', purpose: 'Shape the first workable structure for the core flows.', activities: ['Journey mapping', 'Information architecture', 'Low-fi concepts', 'Key-flow wireframes'], outcome: 'A concept direction ready to prototype.', use: 'Default for a new flow or structure.', skip: 'Extending a pattern the design system already solved.', collab: 'Product on trade-offs, Engineering early on feasibility.', ai: 'Exploring alternative flow structures and surfacing edge cases quickly.', human: 'Judging which structure actually fits how people work.' },
@@ -44,7 +44,7 @@
     },
     'Rapid Prototype': {
       note: "The goal isn't polished delivery. It's reducing uncertainty fast enough to make a decision.",
-      defaultIdx: 2,
+      defaultIdx: 0,
       phases: [
         { label: 'Frame the Question', weeks: 0.5, overlap: 0, cat: 'research', purpose: 'Know exactly what decision this prototype needs to inform.', activities: ['Fast context conversations', 'Constraint check', 'Defining the question'], outcome: 'One clear question the prototype needs to answer.', use: 'Default.', skip: 'The brief is already tight and well understood.', collab: 'Product on what decision is riding on this.', ai: 'Quick synthesis of existing context and prior docs.', human: 'Picking the one question that actually matters.' },
         { label: 'Explore Directions', weeks: 0.75, overlap: 0.25, cat: 'design', purpose: 'Generate a few genuinely different ways to answer the question.', activities: ['Direction sketches', 'Quick UI explorations'], outcome: '2–3 directions worth prototyping.', use: 'Default.', skip: 'The direction is obvious, with only one sensible path.', collab: 'Design peers for a fast gut-check.', ai: 'Generating and varying alternative directions quickly.', human: 'Choosing which direction is worth building.' },
@@ -55,7 +55,7 @@
     },
     'Design System': {
       note: "A foundation and pilot release. System growth continues through product adoption.",
-      defaultIdx: 2,
+      defaultIdx: 0,
       phases: [
         { label: 'Audit & Prioritisation', weeks: 1, overlap: 0, cat: 'research', purpose: 'Know what actually needs fixing before proposing foundations.', activities: ['Component inventory', 'Inconsistency mapping', 'Tech-debt notes', 'Prioritisation'], outcome: 'A prioritised list of what the system needs to solve first.', use: 'Default.', skip: 'Starting from zero, with no existing patterns to reconcile.', collab: 'Engineering on technical debt, Product on priority.', ai: 'Scanning components and screens for inconsistencies at scale.', human: "Deciding what's worth standardising versus leaving alone." },
         { label: 'Foundations', weeks: 1.5, overlap: 0.25, cat: 'design', purpose: 'Build the layer every component inherits from.', activities: ['Tokens', 'Spacing scale', 'Type scale', 'Core primitives'], outcome: 'Foundations components can be built on.', use: 'Almost always, this is the part that has to be right first.', skip: 'Rarely.', collab: 'Engineering on token implementation.', ai: 'Generating scale options and running consistency checks.', human: 'Deciding the actual values and naming.' },
@@ -66,7 +66,7 @@
     },
     'Redesign': {
       note: "Framed as the redesign of a focused product area or workflow. Scope and duration adjust to what's actually being touched.",
-      defaultIdx: 2,
+      defaultIdx: 0,
       phases: [
         { label: 'Diagnose & Frame', weeks: 1, overlap: 0, cat: 'research', purpose: 'Understand why the current version fails before touching it.', activities: ['Usage data review', 'Support-ticket audit', 'Workflow observation'], outcome: "A clear diagnosis of what's actually broken.", use: 'Default.', skip: 'The problems are already well documented.', collab: 'Data on usage evidence, Support on recurring complaints.', ai: 'Clustering support tickets and usage logs into failure patterns.', human: 'Deciding which failure is the one worth solving first.' },
         { label: 'Prioritise', weeks: 0.5, overlap: 0.25, cat: 'research', purpose: 'Decide what actually needs to change versus what to leave alone.', activities: ['Scoping the redesign boundary', 'Trade-off framing'], outcome: 'A scoped boundary the team agrees on.', use: 'Default.', skip: 'The scope is already obvious from the diagnosis.', collab: 'Product on scope and timeline trade-offs.', ai: 'Modeling scope options against effort and impact.', human: 'Owning the scope call.' },
