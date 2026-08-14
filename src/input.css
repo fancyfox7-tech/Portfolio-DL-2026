@@ -33,18 +33,10 @@ img {
   -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
 }
 
-/* ── Pulsing gradient — hero ambient overlay ── */
+/* ── Pulsing gradient keyframe — shared by card/article-card ambient glow ── */
 @keyframes gradientPulse {
   0%, 100% { opacity: 0.04; transform: scale(1); }
   50%       { opacity: 0.07; transform: scale(1.04); }
-}
-.bg-pulse {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 65% 35%, #A63D1F, transparent);
-  animation: gradientPulse 10s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ── Card image — grayscale → colour on hover ── */
@@ -166,7 +158,7 @@ img {
     radial-gradient(ellipse 55% 45% at 8% 65%, rgba(45, 74, 122, 0.04), transparent),
     radial-gradient(ellipse 45% 55% at 92% 18%, rgba(45, 74, 122, 0.03), transparent);
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* ── How I Work row — hover accent ── */
@@ -245,10 +237,10 @@ img {
 }
 
 /* ── Every project gets the approach it needs — project-approach timeline ──
-   Desktop: a gantt chart, one lane per phase, overlapping phases stacked
-   diagonally. Mobile (<680px of the component's own container width, via
-   ResizeObserver — not window width): a vertical accordion. See
-   js/sprint-timeline.js for the layout math. */
+   Desktop: a vertical track, one block per phase, overlapping phases shift
+   upward and layer over the previous block. Mobile (<680px of the
+   component's own container width, via ResizeObserver — not window width):
+   a vertical accordion. See js/sprint-timeline.js for the layout math. */
 /* Matches the hero's primary/secondary button pair exactly:
    inactive = secondary (border-text, no fill), active = primary (bg-text fill). */
 .sprint-tab {
@@ -304,16 +296,16 @@ img {
   white-space: nowrap;
 }
 
-/* Desktop gantt phase bar — accent tint/border set inline per category */
+/* Desktop timeline block — fill/text set inline per active state */
 .sprint-bar {
   cursor: pointer;
   transition: box-shadow 150ms ease, background 150ms ease;
 }
 .sprint-bar:not(.active):hover {
-  box-shadow: 0 0 0 1.5px var(--hover-ring);
+  box-shadow: 0 0 0 1.5px rgba(166, 61, 31, 0.4);
 }
 
-/* Mobile accordion header — accent tint set inline per category */
+/* Mobile accordion header — fill/text set inline per active state */
 .sprint-mobile-header {
   cursor: pointer;
   transition: border-radius 150ms ease;
@@ -406,8 +398,8 @@ img {
 
 /* Pulsing glow behind the active node */
 @keyframes nodeGlowPulse {
-  0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
-  50%       { opacity: 0.3;  transform: translate(-50%, -50%) scale(1.15); }
+  0%, 100% { opacity: 0.25; transform: translate(-50%, -50%) scale(1); }
+  50%       { opacity: 0.55; transform: translate(-50%, -50%) scale(1.3); }
 }
 
 .node-glow-active {
@@ -418,7 +410,7 @@ img {
   height: 70px;
   border-radius: 50%;
   background: radial-gradient(circle, #A63D1F, transparent 70%);
-  animation: nodeGlowPulse 10s ease-in-out infinite;
+  animation: nodeGlowPulse 2.4s ease-in-out infinite;
   pointer-events: none;
   z-index: -1;
 }

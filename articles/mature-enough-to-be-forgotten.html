@@ -224,7 +224,14 @@
       font-size: 13px;
     }
 
-    /* Nav */
+    /* Nav — matches the homepage/case-study nav's responsive inset
+       (Tailwind's px-5 sm:px-10 lg:px-16 xl:px-40) so the [DL_] mark and
+       links land at the same x-position whether you're on / or an article. */
+    .nav-inner { padding: 0 1.25rem; }
+    @media (min-width: 640px)  { .nav-inner { padding: 0 2.5rem; } }
+    @media (min-width: 1024px) { .nav-inner { padding: 0 4rem; } }
+    @media (min-width: 1280px) { .nav-inner { padding: 0 10rem; } }
+
     .nav-links { display: flex; align-items: center; gap: 2rem; font-family: 'Fira Code', monospace; font-size: 13px; }
     .nav-links a { color: #111111; text-decoration: none; transition: color 0.3s; }
     .nav-links a:hover { color: #A63D1F; }
@@ -269,7 +276,7 @@
 
   <!-- ─── Nav ─── -->
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);border-bottom:1px solid rgba(0,0,0,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);">
-    <div style="max-width:1440px;margin:0 auto;position:relative;display:flex;height:70px;align-items:center;justify-content:space-between;padding:0 2.5rem;">
+    <div class="nav-inner" style="max-width:1440px;margin:0 auto;position:relative;display:flex;height:70px;align-items:center;justify-content:space-between;">
       <a href="/" style="font-family:'Fira Code',monospace;font-weight:500;font-size:15px;letter-spacing:0.6px;color:#111111;text-decoration:none;">[DL_]</a>
       <div class="nav-links">
         <a href="/#work">Work</a>

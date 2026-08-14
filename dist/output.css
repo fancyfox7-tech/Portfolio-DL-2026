@@ -710,6 +710,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -754,8 +758,16 @@ video {
   margin-top: 1.5rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-\[14px\] {
   margin-top: 14px;
+}
+
+.mt-\[3px\] {
+  margin-top: 3px;
 }
 
 .mt-\[6px\] {
@@ -768,10 +780,6 @@ video {
 
 .block {
   display: block;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .inline {
@@ -800,10 +808,6 @@ video {
 
 .h-16 {
   height: 4rem;
-}
-
-.h-2 {
-  height: 0.5rem;
 }
 
 .h-3 {
@@ -876,10 +880,6 @@ video {
 
 .w-16 {
   width: 4rem;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .w-3 {
@@ -1001,10 +1001,6 @@ video {
 
 .flex-shrink-0 {
   flex-shrink: 0;
-}
-
-.shrink {
-  flex-shrink: 1;
 }
 
 .shrink-0 {
@@ -1174,10 +1170,6 @@ video {
   gap: 13px;
 }
 
-.gap-\[1px\] {
-  gap: 1px;
-}
-
 .gap-\[22px\] {
   gap: 22px;
 }
@@ -1232,10 +1224,6 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
-}
-
-.break-words {
-  overflow-wrap: break-word;
 }
 
 .rounded-2xl {
@@ -1338,10 +1326,6 @@ video {
   background-color: rgba(0,0,0,0.15);
 }
 
-.bg-\[rgba\(200\2c 200\2c 200\2c 0\.78\)\] {
-  background-color: rgba(200,200,200,0.78);
-}
-
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.92\)\] {
   background-color: rgba(255,255,255,0.92);
 }
@@ -1392,6 +1376,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/55 {
+  background-color: rgb(255 255 255 / 0.55);
 }
 
 .object-cover {
@@ -1646,10 +1634,6 @@ video {
   padding-top: 1rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1770,10 +1754,6 @@ video {
   font-size: 40px;
 }
 
-.text-\[9px\] {
-  font-size: 9px;
-}
-
 .text-\[clamp\(0\.8125rem\2c 0\.75rem_\+_0\.3vw\2c 1rem\)\] {
   font-size: clamp(0.8125rem, 0.75rem + 0.3vw, 1rem);
 }
@@ -1857,6 +1837,10 @@ video {
 
 .leading-\[1\.25\] {
   line-height: 1.25;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
 }
 
 .leading-\[1\.3\] {
@@ -2099,6 +2083,12 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -2185,7 +2175,7 @@ img {
   -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
 }
 
-/* ── Pulsing gradient — hero ambient overlay ── */
+/* ── Pulsing gradient keyframe — shared by card/article-card ambient glow ── */
 
 @keyframes gradientPulse {
   0%, 100% {
@@ -2197,15 +2187,6 @@ img {
     opacity: 0.07;
     transform: scale(1.04);
   }
-}
-
-.bg-pulse {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 65% 35%, #A63D1F, transparent);
-  animation: gradientPulse 10s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ── Card image — grayscale → colour on hover ── */
@@ -2366,7 +2347,7 @@ img {
     radial-gradient(ellipse 55% 45% at 8% 65%, rgba(45, 74, 122, 0.04), transparent),
     radial-gradient(ellipse 45% 55% at 92% 18%, rgba(45, 74, 122, 0.03), transparent);
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* ── How I Work row — hover accent ── */
@@ -2465,10 +2446,10 @@ img {
 }
 
 /* ── Every project gets the approach it needs — project-approach timeline ──
-   Desktop: a gantt chart, one lane per phase, overlapping phases stacked
-   diagonally. Mobile (<680px of the component's own container width, via
-   ResizeObserver — not window width): a vertical accordion. See
-   js/sprint-timeline.js for the layout math. */
+   Desktop: a vertical track, one block per phase, overlapping phases shift
+   upward and layer over the previous block. Mobile (<680px of the
+   component's own container width, via ResizeObserver — not window width):
+   a vertical accordion. See js/sprint-timeline.js for the layout math. */
 
 /* Matches the hero's primary/secondary button pair exactly:
    inactive = secondary (border-text, no fill), active = primary (bg-text fill). */
@@ -2534,7 +2515,7 @@ img {
   white-space: nowrap;
 }
 
-/* Desktop gantt phase bar — accent tint/border set inline per category */
+/* Desktop timeline block — fill/text set inline per active state */
 
 .sprint-bar {
   cursor: pointer;
@@ -2542,10 +2523,10 @@ img {
 }
 
 .sprint-bar:not(.active):hover {
-  box-shadow: 0 0 0 1.5px var(--hover-ring);
+  box-shadow: 0 0 0 1.5px rgba(166, 61, 31, 0.4);
 }
 
-/* Mobile accordion header — accent tint set inline per category */
+/* Mobile accordion header — fill/text set inline per active state */
 
 .sprint-mobile-header {
   cursor: pointer;
@@ -2664,13 +2645,13 @@ img {
 
 @keyframes nodeGlowPulse {
   0%, 100% {
-    opacity: 0.15;
+    opacity: 0.25;
     transform: translate(-50%, -50%) scale(1);
   }
 
   50%       {
-    opacity: 0.3;
-    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(1.3);
   }
 }
 
@@ -2682,7 +2663,7 @@ img {
   height: 70px;
   border-radius: 50%;
   background: radial-gradient(circle, #A63D1F, transparent 70%);
-  animation: nodeGlowPulse 10s ease-in-out infinite;
+  animation: nodeGlowPulse 2.4s ease-in-out infinite;
   pointer-events: none;
   z-index: -1;
 }
@@ -2898,12 +2879,24 @@ img {
     grid-column: span 2 / span 2;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .md\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:inline {
     display: inline;
+  }
+
+  .md\:h-\[545px\] {
+    height: 545px;
   }
 
   .md\:h-auto {
@@ -2962,6 +2955,10 @@ img {
     grid-template-columns: 1fr 1.2fr;
   }
 
+  .md\:grid-cols-\[280px_1fr\] {
+    grid-template-columns: 280px 1fr;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -3012,6 +3009,10 @@ img {
 
   .md\:overflow-visible {
     overflow: visible;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
   }
 
   .md\:border-b-0 {
