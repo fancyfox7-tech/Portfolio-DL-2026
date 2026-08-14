@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mature enough to be forgotten - DL_</title>
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #FFFFFF;
+      --color-text: #111111;
+      --color-accent: #A63D1F;
+      --color-border: rgba(0,0,0,0.1);
+      --color-surface: #F5F5F5;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Article container */
+    .article-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 8rem;
+    }
+
+    /* Article header */
+    .article-meta {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .article-meta .tag {
+      border: 1px solid var(--color-border);
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .article-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--color-text);
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-subtitle em {
+      font-style: normal;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .section-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--color-text);
+      margin-bottom: 1.25rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--color-accent);
+      padding: 1.25rem 1.75rem;
+      margin: 2.5rem 0;
+      background: var(--color-surface);
+    }
+
+    .pull-quote p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Callout box */
+    .callout {
+      border: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: var(--color-surface);
+    }
+
+    .callout-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--color-accent);
+      margin-bottom: 0.75rem;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .callout p {
+      font-size: 16px;
+      margin-bottom: 0.75rem;
+    }
+
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* Links in callouts */
+    .callout a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .callout a:hover { opacity: 0.75; }
+
+    /* Closing */
+    .article-closing {
+      padding-top: 0;
+    }
+
+    .article-closing p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    .article-closing .accent { color: var(--color-accent); }
+
+    /* Author */
+    .author-block {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    .author-info { font-size: 14px; line-height: 1.5; }
+
+    .author-name {
+      font-weight: 600;
+      display: block;
+    }
+
+    .author-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--color-text);
+    }
+
+    footer .footer-right {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+    }
+
+    /* Nav */
+    .nav-links { display: flex; align-items: center; gap: 2rem; font-family: 'Fira Code', monospace; font-size: 13px; }
+    .nav-links a { color: #111111; text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: #A63D1F; }
+
+    .status-badge { display: inline-flex; align-items: center; gap: 6px; color: #15803d; font-family: 'Fira Code', monospace; font-size: 11px; white-space: nowrap; }
+    .status-dot-wrap { position: relative; display: flex; width: 6px; height: 6px; }
+    .status-dot-ping { position: absolute; display: inline-flex; width: 100%; height: 100%; border-radius: 50%; background: #4ade80; opacity: 0.75; animation: dc-ping 1.5s cubic-bezier(0,0,0.2,1) infinite; }
+    .status-dot { position: relative; display: inline-flex; width: 6px; height: 6px; border-radius: 50%; background: #22c55e; }
+    @keyframes dc-ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+
+    .cv-btn { border: 1px solid #111111; font-family: 'Fira Code', monospace; color: #111111; font-size: 12px; padding: 7px 16px; border-radius: 999px; text-decoration: none; transition: border-color 0.3s, color 0.3s; white-space: nowrap; }
+    .cv-btn:hover { border-color: #A63D1F; color: #A63D1F; }
+
+    .hamburger-btn { display: none; align-items: center; justify-content: center; width: 36px; height: 36px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .hamburger { position: relative; display: block; width: 18px; height: 12px; }
+    .hamburger::before, .hamburger::after, .hamburger span {
+      content: ''; position: absolute; left: 0; width: 100%; height: 1.5px; background: #111111;
+      transition: transform 0.3s, opacity 0.3s, top 0.3s;
+    }
+    .hamburger::before { top: 0; }
+    .hamburger span     { top: 5.25px; }
+    .hamburger::after   { top: 10.5px; }
+    .hamburger-btn[aria-expanded="true"] .hamburger::before { top: 5.25px; transform: rotate(45deg); }
+    .hamburger-btn[aria-expanded="true"] .hamburger span     { opacity: 0; }
+    .hamburger-btn[aria-expanded="true"] .hamburger::after   { top: 5.25px; transform: rotate(-45deg); }
+
+    #mobile-menu { display: none; flex-direction: column; border-top: 1px solid var(--color-border); background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 0 1.25rem; position: absolute; top: 100%; left: 0; right: 0; }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { font-family: 'Fira Code', monospace; color: #111111; text-decoration: none; font-size: 14px; padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+    #mobile-menu a:last-child { border-bottom: none; }
+
+    @media (max-width: 640px) {
+      .nav-links, .cv-btn-desktop, .status-badge { display: none; }
+      .hamburger-btn { display: flex; }
+      .article-title { font-size: 32px; }
+      .article-subtitle { font-size: 18px; }
+      .article-wrapper { padding: 3rem 1.25rem 6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Nav ─── -->
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);border-bottom:1px solid rgba(0,0,0,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);">
+    <div style="max-width:1440px;margin:0 auto;position:relative;display:flex;height:70px;align-items:center;justify-content:space-between;padding:0 2.5rem;">
+      <a href="/" style="font-family:'Fira Code',monospace;font-weight:500;font-size:15px;letter-spacing:0.6px;color:#111111;text-decoration:none;">[DL_]</a>
+      <div class="nav-links">
+        <a href="/#work">Work</a>
+        <a href="/#how-i-work">Process</a>
+        <a href="/#about">About</a>
+        <a href="/#articles">Articles</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span class="status-badge">
+          <span class="status-dot-wrap"><span class="status-dot-ping"></span><span class="status-dot"></span></span>
+          Open to Work
+        </span>
+        <a href="https://drive.google.com/uc?export=download&id=1XcTO_O9p-34pGpT_8CcOZwiL8PDdYiPG"
+           target="_blank" rel="noopener noreferrer"
+           class="cv-btn cv-btn-desktop">
+          Download CV
+        </a>
+        <button id="mobile-menu-btn" class="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger"><span></span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu">
+      <a href="/#work">Work</a>
+      <a href="/#how-i-work">Process</a>
+      <a href="/#about">About</a>
+      <a href="/#articles">Articles</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="article-wrapper">
+
+    <div class="article-meta">
+      <span class="tag">[Design Systems_]</span>
+      <span class="tag">[Agentic AI_]</span>
+      <span>August 2026</span>
+    </div>
+
+    <h1 class="article-title">Mature enough to be forgotten</h1>
+    <p class="article-subtitle">The paradox of a design system mature enough that the organization stops seeing why it needs <em>the designer behind it.</em></p>
+
+    <!-- 01 -->
+    <div class="section">
+      <span class="section-label">01 /</span>
+      <p>Every product organization eventually asks the same question, usually too late: when did we stop being able to move fast without breaking something?</p>
+      <p>The answer is almost never "when we grew." It's when growth outpaced the infrastructure holding the product together. Features shipped by different teams, at different speeds, with different assumptions about how a button should behave or what a status color means. None of it was wrong in isolation. Together, it was unmanageable.</p>
+      <p>This is the pattern before any AI enters the picture. A startup ships fast because there's nothing to slow it down: no design system, no shared components, no one asking whether this decision matches the last one. For a while, that's not a cost. It's a feature. Then the product hits a certain size, and every new screen takes longer to build than the last, because nothing can be reused and nothing agrees with anything else. The company hires a design lead, and the first project is always the same project: stop, rebuild the foundation, rewrite what already shipped.</p>
+      <p>A design system, at that point, isn't a nice-to-have. It's the thing that determines whether the next two years of building are fast or slow, coherent or fragmented.</p>
+    </div>
+
+    <!-- 02 -->
+    <div class="section">
+      <span class="section-label">02 / Starting with the system, not ending there</span>
+      <p>At Omniva, that question came early. There was no formal design team yet, no established process, and ambitious targets for how fast the product needed to grow. I made the call to start with the design system before almost anything else, not because it was standard practice, but because of exactly the dynamic above: a fast-moving frontend team, high ambition, and no time to rebuild later what could be built right the first time.</p>
+      <p>It wasn't a popular sequencing decision in the moment. Design systems don't produce visible features. They produce the conditions for features to be built consistently, which is a much harder thing to defend in a roadmap review. But two years in, the payoff was structural: new screens shipped faster, not slower, because the foundation didn't have to be renegotiated every time.</p>
+    </div>
+
+    <!-- 03 -->
+    <div class="section">
+      <span class="section-label">03 / What's different now</span>
+      <p>That was the old cycle: skip the system, pay for it later. It's a lesson most fast-growing companies eventually learn, one way or another.</p>
+      <p>What's different now is where the risk shows up. Agentic prototyping means anyone, a PM, an engineer, a stakeholder with an idea, can generate a working interface in code, built from real components, and ship it directly. The system can be flawlessly documented, every token named, every variant accounted for, and the outcome can still drift, because using a design system correctly was never just about having access to the right components. It's about judgment: recognizing when a case is different enough that the existing pattern shouldn't apply, and knowing what to build instead. That judgment doesn't ship with the component library, no matter how mature it is.</p>
+    </div>
+
+    <!-- 04 -->
+    <div class="section">
+      <span class="section-label">04 / Nothing screams unreviewed</span>
+      <p>So the output looks right. It behaves correctly. Nothing about it screams "unreviewed." And that's precisely when organizations stop asking why a designer needs to be in the loop at all. Not because the system failed, but because it worked well enough, on the surface, to make the person who built it look optional.</p>
+
+      <div class="pull-quote">
+        <p>Not because the system failed. Because it worked well enough to make the person who built it look optional.</p>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="section">
+      <span class="section-label">05 / Two ways this ends</span>
+      <p>There's a version of this story where the ending is obvious: badly built systems eventually collapse under their own inconsistency, and someone gets called in to fix it. That's the failure mode every design leader already knows how to recognize, and every organization already knows how to respond to. A visible collapse forces a conversation.</p>
+      <p>This is the other one, and it's harder to see coming, because nothing breaks. The system holds. The components render correctly. Stakeholders ship features on schedule, sometimes faster than the design team ever could. By every visible measure, success keeps happening, quarter after quarter.</p>
+      <p>But visible success and design judgment are not the same thing, and a system can deliver one while quietly losing the other. Every shipped screen is still a decision: does this case fit the existing pattern, or does it need something the system doesn't have yet. When that decision keeps getting made without anyone trained to make it, the system doesn't fail. It just stops being steered. Nobody notices, because nothing looks wrong. It only shows up later, in the same place it always does: a product that technically works but no longer holds together as one coherent experience, and no one left who remembers why the original decisions were made the way they were.</p>
+    </div>
+
+    <!-- 06 -->
+    <div class="section">
+      <span class="section-label">06 / What we don't know yet</span>
+      <p>None of this means the outcome is already written. We don't yet know what happens, long-term, to products that ship fast on a well-built system with no one asking why behind them. Maybe the components hold up fine on their own. Maybe they don't, and the cost just takes longer to show up than it used to.</p>
+      <p>What's clearer is the alternative: when a designer stays in that loop, the job isn't different from what it's always been. It was never about drawing the screens. It was about having a say in what ships, and why, before it ships, not after. Agentic tooling didn't change that function. It changed how easy it is to skip it entirely.</p>
+
+      <div class="pull-quote">
+        <p>It was never about drawing the screens. It was about having a say in what ships, and why, before it ships.</p>
+      </div>
+
+      <p>It's a strange irony that the loudest fear about AI and design right now is framed as "AI will replace designers," as if the job being replaced was making things look polished in Figma. That framing was already wrong before any of this started. It just took a tool good enough to expose it.</p>
+    </div>
+
+    <!-- 07 -->
+    <div class="article-closing">
+      <span class="section-label">07 /</span>
+      <p>There's a version of this story where the ending is obvious, and a version that's harder to see coming.</p>
+      <p class="accent">The version of this that should worry design teams isn't the one where the system fails. It's the one where it succeeds without them in the room.</p>
+    </div>
+
+    <!-- Author -->
+    <div class="author-block">
+      <div class="author-avatar">DL_</div>
+      <div class="author-info">
+        <span class="author-name">Desi Lazova</span>
+        <span class="author-title">Lead Product Designer · I simplify complexity for people.</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span>DL_ · 2026</span>
+    <span class="footer-right">I simplify complexity for people.</span>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      function openMenu() { menu.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+      function closeMenu() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+
+      btn.addEventListener('click', function () {
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+      document.addEventListener('click', function (e) {
+        if (btn.getAttribute('aria-expanded') === 'true' && !menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') closeMenu();
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 640) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
