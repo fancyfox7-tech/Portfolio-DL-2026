@@ -220,20 +220,47 @@ img {
   z-index: -1;
 }
 
-/* ── Hero caret ── */
-@keyframes caret-blink {
-  0%, 50%  { opacity: 1; }
-  51%, 100% { opacity: 0; }
+/* ── Hero "for people." type/delete loop ──
+   Ghost span (visibility: hidden, full text, normal flow) reserves the
+   box's exact dimensions permanently. The visible animated span sits
+   position: absolute on top of it, so height/width never shift while
+   typing or deleting. Font-size/line-height/weight for this element come
+   from the Tailwind classes on .highlight-line in the markup, so the
+   responsive clamp() scale stays in one place. */
+.highlight-line {
+  position: relative;
+  display: block;
 }
-.caret {
+.highlight-ghost {
+  visibility: hidden;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.highlight-visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.highlight {
+  display: inline;
+  white-space: nowrap;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+.cursor {
   display: inline-block;
-  width: 2px;
-  height: 0.75em;
+  width: 3px;
+  height: 0.83em;
   background: var(--color-text);
   margin-left: 4px;
-  vertical-align: middle;
-  opacity: 0.45;
-  animation: caret-blink 1.2s step-end infinite;
+  animation: dl-blink 0.8s steps(2, jump-none) infinite;
+}
+@keyframes dl-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ── Every project gets the approach it needs — project-approach timeline ──
@@ -428,7 +455,7 @@ img {
   .hero-grad-cool { opacity: 0.04; }
   .bg-pulse-local { animation: none; opacity: 0.08; }
   .bg-cool-local  { animation: none; opacity: 0.05; }
-  .caret { animation: none; opacity: 1; }
+  .cursor { animation: none; opacity: 1; }
   .card::before, .article-card::before { animation: none; opacity: 0.04; }
   .card, .article-card {
     transition: box-shadow 0.35s var(--ease-standard);

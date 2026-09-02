@@ -2422,27 +2422,58 @@ img {
   z-index: -1;
 }
 
-/* ── Hero caret ── */
+/* ── Hero "for people." type/delete loop ──
+   Ghost span (visibility: hidden, full text, normal flow) reserves the
+   box's exact dimensions permanently. The visible animated span sits
+   position: absolute on top of it, so height/width never shift while
+   typing or deleting. Font-size/line-height/weight for this element come
+   from the Tailwind classes on .highlight-line in the markup, so the
+   responsive clamp() scale stays in one place. */
 
-@keyframes caret-blink {
-  0%, 50%  {
+.highlight-line {
+  position: relative;
+  display: block;
+}
+
+.highlight-ghost {
+  visibility: hidden;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.highlight-visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.highlight {
+  display: inline;
+  white-space: nowrap;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.83em;
+  background: var(--color-text);
+  margin-left: 4px;
+  animation: dl-blink 0.8s steps(2, jump-none) infinite;
+}
+
+@keyframes dl-blink {
+  0%, 100% {
     opacity: 1;
   }
 
-  51%, 100% {
+  50% {
     opacity: 0;
   }
-}
-
-.caret {
-  display: inline-block;
-  width: 2px;
-  height: 0.75em;
-  background: var(--color-text);
-  margin-left: 4px;
-  vertical-align: middle;
-  opacity: 0.45;
-  animation: caret-blink 1.2s step-end infinite;
 }
 
 /* ── Every project gets the approach it needs — project-approach timeline ──
@@ -2708,7 +2739,7 @@ img {
     opacity: 0.05;
   }
 
-  .caret {
+  .cursor {
     animation: none;
     opacity: 1;
   }

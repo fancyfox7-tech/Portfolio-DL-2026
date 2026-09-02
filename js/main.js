@@ -44,6 +44,43 @@ window.addEventListener('scroll', () => {
   });
 })();
 
+// ─── Hero headline: "for people." type/delete loop ───
+(function () {
+  const text = 'for people.';
+  const el = document.getElementById('typeTarget');
+  if (!el) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion) {
+    el.textContent = text;
+    return;
+  }
+
+  let i = 0;
+  let deleting = false;
+
+  function tick() {
+    if (!deleting) {
+      i++;
+      el.textContent = text.slice(0, i);
+      if (i === text.length) {
+        setTimeout(() => { deleting = true; tick(); }, 2200);
+        return;
+      }
+    } else {
+      i--;
+      el.textContent = text.slice(0, i);
+      if (i === 0) {
+        setTimeout(() => { deleting = false; tick(); }, 900);
+        return;
+      }
+    }
+    setTimeout(tick, deleting ? 90 : 160);
+  }
+  tick();
+})();
+
 // ─── CV Preview Modal ───
 (function () {
   const modal    = document.getElementById('cv-modal');
