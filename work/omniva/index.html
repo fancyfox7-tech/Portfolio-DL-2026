@@ -179,10 +179,10 @@
         <!-- Left: body + user quotes + success -->
         <div class="flex flex-col gap-6 flex-1 min-w-0">
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-            Omniva is an AI-native cloud infrastructure console. Engineers use it to manage clusters, storage, and workloads - operations where confusion has a real cost.
+            Omniva is an AI-native cloud infrastructure console. Users rely on it to manage clusters, storage, and workloads - operations where confusion has a real cost.
           </p>
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-            The product had been built for technical capability first. The homepage reflected that - it showed what the system could do, not what engineers needed to do next. Datadog showed low engagement and low time-on-page across core sections. Session recordings showed engineers landing and leaving within seconds.
+            The product had been built for technical capability first. The homepage reflected that - it showed what the system could do, not what users needed to do next. Datadog showed low engagement and low time-on-page across core sections. Session recordings showed users landing and leaving within seconds.
           </p>
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
             The product was technically ready to grow up. This is what building that foundation looked like.
@@ -206,8 +206,8 @@
           <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl mt-2">
             <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Success looked like this</p>
             <ul class="flex flex-col gap-2">
-              <li class="font-sans text-text text-[15px] leading-[1.65]">- Engineers return to the homepage daily as part of their operational workflow</li>
-              <li class="font-sans text-text text-[15px] leading-[1.65]">- CS escalations drop - engineers activate and operate independently</li>
+              <li class="font-sans text-text text-[15px] leading-[1.65]">- Users return to the homepage daily as part of their operational workflow</li>
+              <li class="font-sans text-text text-[15px] leading-[1.65]">- CS escalations drop - users activate and operate independently</li>
               <li class="font-sans text-text text-[15px] leading-[1.65]">- Session depth grows from seconds to minutes</li>
             </ul>
           </div>
@@ -328,7 +328,7 @@
             There was no existing research practice. No analytics loop. No interviews. I built one.
           </p>
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-            I created a tracking structure in Confluence and pulled weekly data from Datadog - adoption, engagement, retention, time-on-task, errors, and drop-off points. Session recordings gave texture to the numbers: where engineers hesitated, where they navigated away, where they repeated the same action without succeeding.
+            I created a tracking structure in Confluence and pulled weekly data from Datadog - adoption, engagement, retention, time-on-task, errors, and drop-off points. Session recordings gave texture to the numbers: where users hesitated, where they navigated away, where they repeated the same action without succeeding.
           </p>
           <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
           I tracked and documented these numbers continuously for at least two months before anything else started. A pattern became clear: new users rarely returned after onboarding, and existing users struggled to find what they needed. The signals were consistent. The reasons weren't obvious - and that gap justified the first structured user interviews. Nobody had considered redesigning the console yet. That consistency, not a single report, is what eventually brought the product team to the table, starting with the Head of Product and then the customer console PM.
@@ -364,7 +364,7 @@
 
       <div class="flex flex-col gap-4 max-w-[680px]">
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-        With the research pointing to navigation as the first blocker, I started with the foundation. The product was becoming a modular platform, meant to bring together different services and capabilities under one system, and the inherited navigation no longer matched that shape: sections were grouped by engineering logic, not by how engineers actually thought about their own work. I decided to rebuild the navigation and remove the footer entirely before touching any screen, regrouping sections around that mental model instead, so related capabilities sat together the way users expected to find them.
+        With the research pointing to navigation as the first blocker, I started with the foundation. The product was becoming a modular platform, meant to bring together different services and capabilities under one system, and the inherited navigation no longer matched that shape: sections were grouped by engineering logic, not by how users actually thought about their own work. I decided to rebuild the navigation and remove the footer entirely before touching any screen, regrouping sections around that mental model instead, so related capabilities sat together the way users expected to find them.
         </p>
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
           The restructure touched four things at once: information grouping, header cleanup, footer removal, and UX copy.
@@ -399,7 +399,7 @@
       <h3 class="font-sans font-bold text-text text-[17px] leading-[1.6]">Workflows out of dialogs - into context.</h3>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
-      The same modular shift meant workflows needed to change too. I replaced the heavy modal dialogs with two complementary patterns: full-page layout with breadcrumb navigation for creation flows, and progressive disclosure for complex configurations. The modal pattern couldn't scale with the product: every new feature meant cramming more fields into the same dialog, with no breadcrumb and no spatial context for engineers mid-setup.
+      The same modular shift meant workflows needed to change too. I replaced the heavy modal dialogs with two complementary patterns: full-page layout with breadcrumb navigation for creation flows, and progressive disclosure for complex configurations. The modal pattern couldn't scale with the product: every new feature meant cramming more fields into the same dialog, with no breadcrumb and no spatial context for users mid-setup.
       </p>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
@@ -443,7 +443,7 @@
 
       <div class="flex flex-col gap-4 max-w-[680px]">
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
-          Two types of engineers used the same screen. New engineers who had never created a cluster. Operational engineers who ran production workloads daily. The homepage gave both the same thing - raw utilisation charts and subscription data. Neither group could use it.
+          Two types of users used the same screen. New users who had never created a cluster. Operational users who ran production workloads daily. The homepage gave both the same thing - raw utilisation charts and subscription data. Neither group could use it.
         </p>
         <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75]">
           The surface had no concept of where you were in the journey. It couldn't tell if you'd just added billing or were managing twelve clusters in production. That became the question every iteration tried to answer differently.
@@ -458,12 +458,12 @@
         <div class="flex flex-col gap-2 p-6 md:p-7 border-b md:border-b-0 border-r border-border">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase leading-tight">Does guidance change behaviour? /</p>
           <p class="font-sans font-bold text-text text-[15px] pt-[2px]">Guided empty states</p>
-          <p class="font-sans text-[#444] text-[13px] leading-[1.55]">Hero CTA pattern across every empty state. Engineers had a starting point for the first time. Session depth improved - but recordings revealed a second problem.</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.55]">Hero CTA pattern across every empty state. Users had a starting point for the first time. Session depth improved - but recordings revealed a second problem.</p>
         </div>
         <div class="flex flex-col gap-2 p-6 md:p-7 border-b md:border-b-0 border-r border-border">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase leading-tight">Can they see what they own? /</p>
           <p class="font-sans font-bold text-text text-[15px] pt-[2px]">Metric cards + Cluster Overview</p>
-          <p class="font-sans text-[#444] text-[13px] leading-[1.55]">Account Overview removed - subscription data replaced with live cluster status. Engineers could see their infrastructure. But seeing and understanding are different things.</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.55]">Account Overview removed - subscription data replaced with live cluster status. Users could see their infrastructure. But seeing and understanding are different things.</p>
         </div>
         <div class="flex flex-col gap-2 p-6 md:p-7 bg-text">
           <p class="font-mono text-[rgba(255,255,255,0.5)] text-[10px] tracking-[1px] uppercase leading-tight">What does the system need from me right now? /</p>
@@ -489,7 +489,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">What the data showed</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Session depth improved for new engineers. The recordings confirmed the split we suspected - engineers with existing infrastructure were ignoring the homepage entirely. They'd land, see a CTA they didn't need, and navigate away. One answer, two completely different needs.
+          Session depth improved for new users. The recordings confirmed the split we suspected - users with existing infrastructure were ignoring the homepage entirely. They'd land, see a CTA they didn't need, and navigate away. One answer, two completely different needs.
         </p>
       </div>
 
@@ -505,7 +505,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">The gap 1B couldn't close</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Engineers could see their clusters were running. They still couldn't tell if something was wrong. There was no health signal - no way to know if 94% GPU utilisation was expected or critical. Seeing infrastructure and understanding system state are different problems. 1B solved the first. The signal-driven hub solved the second.
+          Users could see their clusters were running. They still couldn't tell if something was wrong. There was no health signal - no way to know if 94% GPU utilisation was expected or critical. Seeing infrastructure and understanding system state are different problems. 1B solved the first. The signal-driven hub solved the second.
         </p>
       </div>
 
@@ -536,7 +536,7 @@
           <div class="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,2fr)]">
             <div class="font-sans font-semibold text-text text-[13px] px-5 py-[15px] border-r border-border">Cluster health status</div>
             <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px] border-r border-border">Required defining "healthy" with Engineering first - no agreed API endpoint.</div>
-            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">I worked with Engineering to define health from the engineer's perspective. Cluster overview was the interim solution.</div>
+            <div class="font-sans text-text text-[13px] md:text-[14px] leading-[1.5] px-5 py-[15px]">I worked with Engineering to define health from the user's perspective. Cluster overview was the interim solution.</div>
           </div>
         </div>
       </div>
@@ -562,7 +562,7 @@
         <div class="flex flex-col gap-3">
           <div class="flex flex-col gap-1">
             <p class="font-mono font-medium text-[#555] text-[11px]">Onboarding / Activation state</p>
-            <p class="font-mono text-[#555] text-[11px]">Day 0 - guided path, dependencies visible, progressive unlocking as the engineer advances.</p>
+            <p class="font-mono text-[#555] text-[11px]">Day 0 - guided path, dependencies visible, progressive unlocking as the user advances.</p>
           </div>
           <img src="../../images/omniva/hub-onboarding-state.png"
                alt="Hub - Onboarding / Activation state"
@@ -582,7 +582,7 @@
         <div class="flex flex-col gap-3">
           <div class="flex flex-col gap-1">
             <p class="font-mono font-medium text-[#555] text-[11px]">Alerts expanded</p>
-            <p class="font-mono text-[#555] text-[11px]">Drill-down into alerts - engineer sees context and can act directly without leaving the homepage.</p>
+            <p class="font-mono text-[#555] text-[11px]">Drill-down into alerts - user sees context and can act directly without leaving the homepage.</p>
           </div>
           <img src="../../images/omniva/hub-alerts-expanded.png"
                alt="Hub - Alerts expanded"
@@ -594,7 +594,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">One more structural change - Alerts</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-        Alerts moved to top-level navigation, because usability testing showed engineers looking for them directly, as a standalone action item, not nested under Monitoring, where they'd originally been placed. The trade-off was giving alerts permanent nav real estate over keeping the top level minimal, because a missed critical alert cost far more than one extra nav item.
+        Alerts moved to top-level navigation, because usability testing showed users looking for them directly, as a standalone action item, not nested under Monitoring, where they'd originally been placed. The trade-off was giving alerts permanent nav real estate over keeping the top level minimal, because a missed critical alert cost far more than one extra nav item.
         </p>
       </div>
 
@@ -626,7 +626,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">PM · Competitor analysis + CTA positioning</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">Where should the primary action live?</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            I decided on top-left placement for the primary action, because F/Z scanning research, backed by multiple UX studies I shared, showed it as the strongest visual anchor for a dense operational interface. There was also a scalability reason: these actions were going to expand over time, and right-side placement had no room to grow naturally without crowding other elements. PM flagged that most competitor platforms placed the primary action top-right, and the trade-off was choosing evidence on how engineers actually scan the screen and room to scale over matching industry convention, because familiarity mattered less than getting the anchor point right for a technical, high-density UI that would only grow more complex.
+            I decided on top-left placement for the primary action, because F/Z scanning research, backed by multiple UX studies I shared, showed it as the strongest visual anchor for a dense operational interface. There was also a scalability reason: these actions were going to expand over time, and right-side placement had no room to grow naturally without crowding other elements. PM flagged that most competitor platforms placed the primary action top-right, and the trade-off was choosing evidence on how users actually scan the screen and room to scale over matching industry convention, because familiarity mattered less than getting the anchor point right for a technical, high-density UI that would only grow more complex.
           </p>
         </div>
 
@@ -640,9 +640,9 @@
 
         <div class="border border-border rounded-2xl flex flex-col gap-[7px] px-7 py-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Engineering · Defining "healthy"</p>
-          <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">What does system health mean to an engineer?</p>
+          <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">What does system health mean to a user?</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            There was no agreed API endpoint for system health yet, so I shipped Cluster Overview as an interim signal instead of waiting for a formal health indicator. Engineering flagged that "healthy" couldn't be implemented until we agreed on threshold values and warning-vs-critical states, and the trade-off was choosing a working interim solution over delaying the hub until that definition was finalized, because engineers needed a signal now, even an imperfect one. The definition work we did together went on to shape the final signal hierarchy on the hub.
+            There was no agreed API endpoint for system health yet, so I shipped Cluster Overview as an interim signal instead of waiting for a formal health indicator. Engineering flagged that "healthy" couldn't be implemented until we agreed on threshold values and warning-vs-critical states, and the trade-off was choosing a working interim solution over delaying the hub until that definition was finalized, because users needed a signal now, even an imperfect one. The definition work we did together went on to shape the final signal hierarchy on the hub.
           </p>
         </div>
       </div>
@@ -663,11 +663,11 @@
       <h2 class="font-sans font-bold text-text
                  text-[24px] md:text-[32px] lg:text-[36px]
                  leading-[1.15] tracking-[-0.72px]">
-        Engineers could see the signals.<br>They couldn't interpret them.
+        Users could see the signals.<br>They couldn't interpret them.
       </h2>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
-        I introduced the AI agent late, after the operational hub was live, when engineers were still escalating to support to understand what their alerts meant. The interaction model had one principle: surface reasoning, preserve control. My instinct from a pure UX standpoint was to let the agent act directly, but Engineering couldn't yet guarantee reliable outcomes at that stage, and a wrong autonomous action would have cost far more than a slower, human-confirmed one. The trade-off was choosing a slower, transparent interaction over full automation, because the cost of one bad autonomous call outweighed the friction of asking engineers to confirm.
+        I introduced the AI agent late, after the operational hub was live, when users were still escalating to support to understand what their alerts meant. The interaction model had one principle: surface reasoning, preserve control. My instinct from a pure UX standpoint was to let the agent act directly, but Engineering couldn't yet guarantee reliable outcomes at that stage, and a wrong autonomous action would have cost far more than a slower, human-confirmed one. The trade-off was choosing a slower, transparent interaction over full automation, because the cost of one bad autonomous call outweighed the friction of asking users to confirm.
       </p>
 
       <!-- 3-col: Observation / Context / Consider -->
@@ -682,7 +682,7 @@
         </div>
         <div class="flex flex-col gap-2 p-[22px]">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Consider /</p>
-          <p class="font-sans text-text text-[14px] leading-[1.5]">Suggested next action. Engineer retains final control. Always framed as a trade-off.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5]">Suggested next action. User retains final control. Always framed as a trade-off.</p>
         </div>
       </div>
 
@@ -722,11 +722,11 @@
       <h2 class="font-sans font-bold text-text
                  text-[24px] md:text-[32px] lg:text-[36px]
                  leading-[1.15] tracking-[-0.72px]">
-        From a console engineers<br>didn't trust to one they relied on.
+        From a console users<br>didn't trust to one they relied on.
       </h2>
 
       <p class="font-sans text-text text-[16px] md:text-[17px] leading-[1.75] max-w-[680px]">
-        The homepage started with effectively zero meaningful session depth - it existed because products have homepages, not because it had a purpose. The target was a surface engineers would return to daily.
+        The homepage started with effectively zero meaningful session depth - it existed because products have homepages, not because it had a purpose. The target was a surface users would return to daily.
       </p>
 
       <!-- Outcome table 1 - Session depth -->
@@ -734,19 +734,19 @@
         <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
           <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Baseline</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">~0</p>
-          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Meaningful session depth. Engineers landed and navigated away immediately.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Meaningful session depth. Users landed and navigated away immediately.</p>
           <p class="font-mono text-[#666] text-[10px] pt-1">Datadog session recordings</p>
         </div>
         <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
           <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Target</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">Daily</p>
-          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Homepage becomes part of the operational workflow engineers check every day.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Homepage becomes part of the operational workflow users check every day.</p>
           <p class="font-mono text-[#666] text-[10px] pt-1">Success criterion set with PM</p>
         </div>
         <div class="flex flex-col gap-[6px] p-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">2x<span class="text-accent">+</span></p>
-          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Session depth grew from seconds to minutes. Return visit rate increased. Engineers started sessions on the homepage.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Session depth grew from seconds to minutes. Return visit rate increased. Users started sessions on the homepage.</p>
           <p class="font-mono text-[#666] text-[10px] pt-1">Datadog · vs. 1A baseline · directional, measured over ~2 months post-launch</p>
         </div>
       </div>
@@ -762,13 +762,13 @@
         <div class="flex flex-col gap-[6px] p-7 border-b md:border-b-0 border-r border-border">
           <p class="font-mono text-[#555] text-[10px] tracking-[1px] uppercase">Target</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">Self-<br>sufficient</p>
-          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Engineers activate and operate independently without support intervention.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Users activate and operate independently without support intervention.</p>
           <p class="font-mono text-[#666] text-[10px] pt-1">Success criterion set with PM</p>
         </div>
         <div class="flex flex-col gap-[6px] p-7">
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Outcome</p>
           <p class="font-sans font-extrabold text-text text-[40px] leading-none tracking-tight pt-[6px]">−<span class="text-accent">35%</span></p>
-          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Ops workflow task completion time reduced. Qualitative shift in engineer confidence visible across interview cohorts.</p>
+          <p class="font-sans text-text text-[14px] leading-[1.5] pt-[2px]">Ops workflow task completion time reduced. Qualitative shift in user confidence visible across interview cohorts.</p>
           <p class="font-mono text-[#666] text-[10px] pt-1">Usability testing + telemetry, measured over ~2 months post-launch</p>
         </div>
       </div>
@@ -777,7 +777,7 @@
       <div class="bg-surface border-l-2 border-accent flex flex-col gap-2 pl-6 pr-5 py-[18px] rounded-xl">
         <p class="font-mono text-accent text-[10px] tracking-[0.8px] uppercase">Qualitative shift</p>
         <p class="font-sans text-text text-[15px] leading-[1.65]">
-          Before the redesign, engineers struggled to articulate what they would do next in the product. After the signal-driven hub shipped, they could describe their next three steps without prompting. That shift - from confusion to confidence - was the outcome that mattered most.
+          Before the redesign, users struggled to articulate what they would do next in the product. After the signal-driven hub shipped, they could describe their next three steps without prompting. That shift - from confusion to confidence - was the outcome that mattered most.
         </p>
       </div>
 
@@ -788,7 +788,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">Foundation · Navigation &amp; IA</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">I chose to rebuild navigation around the platform's shape, not engineering's.</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            I proposed this direction, and PM and Engineering aligned on it. That structural work is what let every later iteration build on solid ground instead of breaking the engineer's mental model.
+            I proposed this direction, and PM and Engineering aligned on it. That structural work is what let every later iteration build on solid ground instead of breaking the user's mental model.
           </p>
         </div>
 
@@ -804,7 +804,7 @@
           <p class="font-mono text-accent text-[10px] tracking-[1px] uppercase">AI Agent · Interaction model</p>
           <p class="font-sans font-bold text-text text-[16px] leading-[1.6]">I chose transparency over automation.</p>
           <p class="font-sans text-text text-[15px] leading-[1.65]">
-            This was my call: surface reasoning instead of letting the agent act independently. Engineering agreed given the reliability constraints at the time. That choice kept engineer trust intact while the system was still new.
+            This was my call: surface reasoning instead of letting the agent act independently. Engineering agreed given the reliability constraints at the time. That choice kept user trust intact while the system was still new.
           </p>
         </div>
       </div>
@@ -836,7 +836,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 border border-border rounded-2xl overflow-hidden">
         <div class="flex flex-col gap-[7px] p-7 border-b border-r border-border">
           <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Fix the structure before the surface</p>
-          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">IA and navigation work before the homepage redesign meant every iteration built on a foundation engineers already understood. No mental model breaks mid-project. The sequence was the strategy.</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">IA and navigation work before the homepage redesign meant every iteration built on a foundation users already understood. No mental model breaks mid-project. The sequence was the strategy.</p>
         </div>
         <div class="flex flex-col gap-[7px] p-7 border-b border-border">
           <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">Ship to learn, not just to ship</p>
@@ -856,7 +856,7 @@
         </div>
         <div class="flex flex-col gap-[7px] p-7">
           <p class="font-sans font-bold text-text text-[15px] leading-[1.6]">AI as support, not automation</p>
-          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">The hardest decision on the agent wasn't the UI pattern - it was deciding what not to automate. Engineers need to understand what's happening, not just be told what to do.</p>
+          <p class="font-sans text-[#444] text-[13px] leading-[1.6]">The hardest decision on the agent wasn't the UI pattern - it was deciding what not to automate. Users need to understand what's happening, not just be told what to do.</p>
         </div>
       </div>
         <div class="flex flex-col gap-[7px] p-7 border-t border-border">
