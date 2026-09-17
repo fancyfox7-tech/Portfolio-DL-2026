@@ -696,10 +696,6 @@ video {
   order: 3;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .-mx-5 {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
@@ -1110,10 +1106,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-\[minmax\(0\2c 1fr\)_minmax\(0\2c 2fr\)_minmax\(0\2c 2fr\)\] {
   grid-template-columns: minmax(0,1fr) minmax(0,2fr) minmax(0,2fr);
 }
@@ -1430,10 +1422,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .p-6 {
@@ -2926,11 +2914,6 @@ img {
     padding-right: 2rem;
   }
 
-  .sm\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -2953,10 +2936,6 @@ img {
 @media (min-width: 768px) {
   .md\:order-none {
     order: 0;
-  }
-
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
   }
 
   .md\:col-span-2 {
@@ -3047,10 +3026,6 @@ img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-\[1fr_1\.2fr\] {
     grid-template-columns: 1fr 1.2fr;
   }
@@ -3119,16 +3094,8 @@ img {
     border-bottom-width: 0px;
   }
 
-  .md\:border-r {
-    border-right-width: 1px;
-  }
-
   .md\:p-10 {
     padding: 2.5rem;
-  }
-
-  .md\:p-6 {
-    padding: 1.5rem;
   }
 
   .md\:p-7 {
